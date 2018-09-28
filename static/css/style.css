@@ -59,31 +59,46 @@ a:hover {
 .text_block.list_text {
     padding-left: 20px;
     padding-top: 5px;
+    font-weight: initial;
 }
 
-.list_link {
+.list_item_title {
     padding-left: 5px;
+    display: inline;
 }
 
-.blog_link {
+.list_item_metadata {
     font-size: 14px;
     color: #9E9E9E;
     font-weight: 400;
+    display: inline-block;
 }
 
-.blog_link:before {
+.list_item_metadata:before {
     content:"\00b7";
     color: #9E9E9E;
-    padding: 0 5px;
+    padding: 0 5px 0 4px;
 }
 
-.blog_link:hover {
+.list_item_metadata:hover {
     color: #9E9E9E;
 }
 
 .section_list li {
     list-style-type: decimal;
     list-style-position: inside;
+}
+
+.text_block_link {
+    font-weight: initial;
+}
+
+li:hover .list_item_title {
+    color: #4B2E83;
+}
+
+li:hover .text_block.list_text {
+    color: #333333;
 }
 
 @media only screen and (max-width: 667px) {
@@ -103,5 +118,31 @@ a:hover {
 
     .footer {
         margin: 0 30px;
+    }
+
+    .section_header {
+        margin: 0 30px 15px 30px;
+    }
+
+    .section_list {
+        padding: 0 30px;
+    }
+
+    .section_list .text_block {
+        padding-right: 0;
+    }
+
+    .text_block.list_text {
+        text-indent: 0;
+        padding-left: 0;
+    }
+
+    .list_item_metadata {
+        padding-left: 19px;
+    }
+
+    .section_list li {
+        text-indent: -20px;
+        padding-left: 20px;
     }
 }
