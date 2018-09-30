@@ -8,10 +8,10 @@ from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.api import urlfetch
 
 jinja_environment = jinja2.Environment(
-    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
-
-jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__), 'template')))
+
+jinja_environment.trim_blocks = True
+jinja_environment.lstrip_blocks = True
                     
 class HomePage(webapp2.RequestHandler):
     def get(self):    

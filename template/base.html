@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+    <!--
+
+    Woof! Go Dawgs!
+
+    8888888888888888888888888888888888888888
+    8888888888888888888888888888888888888888
+    8888888888888888888888888888888888888888
+    888888          888   8888       8888888
+    888888          88:    888       8888888
+    88888888     88888     88888   888888888
+    888888888     8888     88888  8888888888
+    888888888     888       888   8888888888
+    888888888     888       888  88888888888
+    8888888888     8   8     8   88888888888
+    8888888888     8   8     8   88888888888
+    88888888888       88        888888888888
+    88888888888       888       888888888888
+    88888888888      8888      8888888888888
+    888888888888     88888     8888888888888
+    8888888888888888888888888888888888888888
+    8888888888888888888888888888888888888888
+    8888888888888888888888888888888888888888
+
+    -->
+    <head>
+{% block head %}
+        <title>{% block title %}Patrick Dugan{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/images/favicon.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">
+{% endblock %}
+    </head>
+    <body>
+        <div class="body_outer_wrapper">
+            <div class="content">
+{% block content %}{% endblock %}
+            </div>
+            <div class="footer">
+                <ul>
+{% block footer %}
+                    <li><a href="mailto:dugan.pat@gmail.com">Email</a></li>
+                    <li><a href="https://twitter.com/doog" target="_blank">Twitter</a></li>
+                    <li><a href="https://github.com/pdugan20" target="_blank">Github</a></li>
+                    <li><a href="https://dribbble.com/patdugan" target="_blank">Dribbble</a></li>
+{% endblock %}
+                </ul>
+            </div>
+        </div>
+    </body>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script> -->
+</html>

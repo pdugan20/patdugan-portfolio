@@ -1,46 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-    <!--
-
-    Woof! Go Dawgs!
-
-    8888888888888888888888888888888888888888
-    8888888888888888888888888888888888888888
-    8888888888888888888888888888888888888888
-    888888          888   8888       8888888
-    888888          88:    888       8888888
-    88888888     88888     88888   888888888
-    888888888     8888     88888  8888888888
-    888888888     888       888   8888888888
-    888888888     888       888  88888888888
-    8888888888     8   8     8   88888888888
-    8888888888     8   8     8   88888888888
-    88888888888       88        888888888888
-    88888888888       888       888888888888
-    88888888888      8888      8888888888888
-    888888888888     88888     8888888888888
-    8888888888888888888888888888888888888888
-    8888888888888888888888888888888888888888
-    8888888888888888888888888888888888888888
-
-    -->
-    <head>
-        <title>Patrick Dugan</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/images/favicon.png" type="image/png">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">
-    </head>
-    <body>
-        <div class="body_outer_wrapper">
-            <div class="content">
+{% extends "base.html" %}
+{% block title %}Patrick Dugan{% endblock %}
+{% block content %}
                 <div class="image_wrapper"><img src="/images/me.jpg" alt="A photo of my Harley and I taken by my friend Katie Hendricks."></div>
                 <div class="text_block">Hi! My name is Patrick Dugan and I lead the advertising and monetization design team at <a href="https://www.quora.com/profile/Patrick-Dugan-3" target="_blank">Quora</a>.</div>
                 <div class="text_block">I previously worked at <a href="https://www.nextdoor.com" target="_blank">Nextdoor</a> and <a href="https://www.google.com" target="_blank">Google</a> and was a member of the Designer Fund's  professional development program, <a href="https://designerfund.com/bridge/" target="_blank">Bridge</a>.</div>
                 <div class="text_block">I live in San Francisco and attended the <a href="https://www.uw.edu" target="_blank">University of Washington</a> in Seattle where I studied Human Computer Interaction.</div>
                 <div class="text_block">I enjoy running, camping, writing, and working on my Harley.</div>
-
                 <div class="section_header">Selected Writing</div>
                 <ul class="section_list">
                     <li>
@@ -65,17 +30,4 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-            <div class="footer">
-                <ul>
-                    <li><a href="mailto:dugan.pat@gmail.com">Email</a></li>
-                    <li><a href="https://twitter.com/doog" target="_blank">Twitter</a></li>
-                    <li><a href="https://github.com/pdugan20" target="_blank">Github</a></li>
-                    <li><a href="https://dribbble.com/patdugan" target="_blank">Dribbble</a></li>
-                </ul>
-            </div>
-        </div>
-    </body>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/scripts.js"></script> -->
-</html>
+{% endblock %}
