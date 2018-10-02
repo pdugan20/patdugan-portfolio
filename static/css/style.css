@@ -107,6 +107,9 @@ li:hover .text_block.list_text {
   .section_header {
     margin: 0 30px 15px 30px;
   }
+  .section_header.top_header {
+    margin-top: 30px;
+  }
   .section_list {
     padding: 0 30px;
   }

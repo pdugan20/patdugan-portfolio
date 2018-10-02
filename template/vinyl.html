@@ -4,8 +4,9 @@
         <link rel="stylesheet" type="text/css" media="screen" href="/css/vinyl.css">
 {% endblock %}
 {% block content %}
-                <div class="section_header">Vinyl Collection</div>
-                <div class="text_block">I love listening to vinyl and currently have <a href="https://www.discogs.com/user/patdugan/collection" target="_blank">{{record_collection|length}} records</a> in my collection. I listen to them on a <a href="https://www.radiomuseum.org/r/sony_str_1800str180.html" target="_blank">Sony STR-1800</a> receiver and a <a href="https://www.vinylengine.com/library/sony/ps-3300.shtml" target="_blank">Sony PS-3300</a> turntable.</div>
+                <div class="section_header top_header">Vinyl Collection</div>
+                <div class="text_block">I love listening to vinyl and currently have <a href="https://www.discogs.com/user/patdugan/collection" target="_blank">{{record_collection|length}} records</a> in my collection. I listen on a <a href="https://www.radiomuseum.org/r/sony_str_1800str180.html" target="_blank">Sony STR-1800</a> receiver and a <a href="https://www.vinylengine.com/library/sony/ps-3300.shtml" target="_blank">Sony PS-3300</a> turntable.</div>
+                <div class="record_collection_wrapper">
 {% for record in record_collection %}
                 <a class="record_wrapper" href="{{ record.4 }}" target="_blank">
                     <img class="record_cover" src="./images/vinyl/{{ record.0 }}.jpg" alt="{{ record.1 }}">
@@ -15,6 +16,7 @@
                     </div>
                 </a>
 {% endfor %}
+                </div>
 {% endblock %}
 {% block footer %}
                     <li><a class="back_link" href="/">Back Home</a></li>
