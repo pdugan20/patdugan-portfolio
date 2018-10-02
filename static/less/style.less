@@ -20,7 +20,7 @@ a:hover {
 
 .body_outer_wrapper {
     display: block;
-    max-width: 550px;
+    max-width: 600px;
     margin: @space_large auto;
 }
 
@@ -62,6 +62,18 @@ a:hover {
     font-size: @font_size_medium;
 }
 
+.forward_link:after {
+    content: "\203A";
+    color: @color_dark_gray;
+    padding-left: @space_tiny;
+    font-size: @font_size_medium;
+}
+
+li.forward_li {
+    float: right;
+    margin-right: 0;
+}
+
 .section_header {
     border-bottom: @border;
     font-size: @font_size_large;
@@ -74,6 +86,10 @@ a:hover {
     padding-left: @space_medium;
     padding-top: @space_tiny;
     font-weight: initial;
+}
+
+.list_link {
+    display: initial;
 }
 
 .list_item_title {

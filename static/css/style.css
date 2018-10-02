@@ -15,7 +15,7 @@ a:hover {
 }
 .body_outer_wrapper {
   display: block;
-  max-width: 550px;
+  max-width: 600px;
   margin: 25px auto;
 }
 .image_wrapper img {
@@ -49,6 +49,16 @@ a:hover {
   padding-right: 5px;
   font-size: 18px;
 }
+.forward_link:after {
+  content: "\203A";
+  color: #9E9E9E;
+  padding-left: 5px;
+  font-size: 18px;
+}
+li.forward_li {
+  float: right;
+  margin-right: 0;
+}
 .section_header {
   border-bottom: 1px solid #D7D7D7;
   font-size: 21px;
@@ -60,6 +70,9 @@ a:hover {
   padding-left: 20px;
   padding-top: 5px;
   font-weight: initial;
+}
+.list_link {
+  display: initial;
 }
 .list_item_title {
   padding-left: 5px;

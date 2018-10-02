@@ -17,8 +17,14 @@ class HomePage(webapp2.RequestHandler):
         path = jinja_environment.get_template('index.html')
         self.response.out.write(path.render())
 
+class QuoraMessagesPage(webapp2.RequestHandler):
+    def get(self):
+        path = jinja_environment.get_template('quora_messages.html')
+        self.response.out.write(path.render())
+
 application = webapp2.WSGIApplication([
     ('/vinyl', vinyl.VinylPage),
+    ('/project/quora-messages', QuoraMessagesPage),
     ('/', HomePage)
 ])
 
