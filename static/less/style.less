@@ -51,16 +51,20 @@ a:hover {
     font-size: @font_size_regular;
 }
 
+.footer a:hover {
+    color: darken(@color_dark_gray, 15%);
+}
+
 .back_link:before {
     content: "\2039";
     color: @color_dark_gray;
     padding-right: @space_tiny;
-    font-size: 18px;
+    font-size: @font_size_medium;
 }
 
 .section_header {
     border-bottom: @border;
-    font-size: @font_size_medium;
+    font-size: @font_size_large;
     font-weight: @font_weight_bold;
     margin-bottom: @space_small;
     padding-bottom: @space_tiny - 1px;
@@ -135,7 +139,7 @@ li:hover .text_block.list_text {
     }
 
     .section_header.top_header {
-        margin-top: 30px;
+        margin-top: @space_huge;
     }
 
     .section_list {

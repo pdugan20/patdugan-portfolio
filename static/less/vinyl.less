@@ -1,5 +1,12 @@
 @import "less/variables";
 
+@record_padding:     8px;
+@record_dimension: 135px;
+
+.record_collection_wrapper {
+    margin-bottom: -@space_tiny;
+}
+
 .record_cover {
     transition: all 0.5s ease;
     box-sizing: border-box;
@@ -9,32 +16,32 @@
 .record_metadata {
     color: @color_white;
     opacity: 0;
-    line-height: 1.2;
+    line-height: @font_tiny_lh;
 }
 
 .record_name {
     position: absolute;
-    line-height: 1.2;
-    top: 8px;
-    left: 8px;
-    right: 8px;
+    line-height: @font_tiny_lh;
+    top: @record_padding;
+    left: @record_padding;
+    right: @record_padding;
 }
 
 .artist_name {
     position: absolute;
-    bottom: 8px;
-    left: 8px;
-    right: 8px;
+    bottom: @record_padding;
+    left: @record_padding;
+    right: @record_padding;
     font-weight: @font_weight_regular;
-    font-size: 13px;
+    font-size: @font_size_tiny;
 }
 
 .record_wrapper {
     position: relative;
     display: inline-block;
-    width: 135px;
+    width: @record_dimension;
     background-color: @color_purple;
-    height: 135px;
+    height: @record_dimension;
     box-sizing: border-box;
     border: 1px solid @color_ultra_light_gray;;
 }
@@ -54,7 +61,8 @@
 
 @media only screen and (max-width: 667px) {
     .record_collection_wrapper {
-        padding: 0 30px 20px 30px;
+        padding: 0 @space_huge @space_medium @space_huge;
+        margin-bottom: 0;
     }
 
     .record_wrapper {
@@ -64,6 +72,6 @@
     }
 
     .record_name {
-        font-size: 14px;
+        font-size: @font_size_regular;
     }
 }

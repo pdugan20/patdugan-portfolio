@@ -40,6 +40,9 @@ a:hover {
   color: #9E9E9E;
   font-size: 14px;
 }
+.footer a:hover {
+  color: #787878;
+}
 .back_link:before {
   content: "\2039";
   color: #9E9E9E;

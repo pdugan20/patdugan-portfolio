@@ -1,3 +1,6 @@
+.record_collection_wrapper {
+  margin-bottom: -5px;
+}
 .record_cover {
   transition: all 0.5s ease;
   box-sizing: border-box;
@@ -45,6 +48,7 @@
 @media only screen and (max-width: 667px) {
   .record_collection_wrapper {
     padding: 0 30px 20px 30px;
+    margin-bottom: 0;
   }
   .record_wrapper {
     width: 32.5%;
