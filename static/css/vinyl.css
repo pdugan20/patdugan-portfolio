@@ -1,0 +1,44 @@
+.record_cover {
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+  width: 100%;
+}
+.record_metadata {
+  color: #FFFFFF;
+  opacity: 0;
+  line-height: 1.2;
+}
+.record_name {
+  position: absolute;
+  line-height: 1.2;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+}
+.artist_name {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  font-weight: 400;
+  font-size: 13px;
+}
+.record_wrapper {
+  position: relative;
+  display: inline-block;
+  width: 135px;
+  background-color: #4B2E83;
+  height: 135px;
+  box-sizing: border-box;
+  border: 1px solid #EFEFEF;
+}
+.record_wrapper:hover {
+  box-sizing: border-box;
+}
+.record_wrapper:hover .record_metadata {
+  opacity: 1;
+}
+.record_wrapper:hover .record_cover {
+  transition: all 0.5s ease;
+  opacity: 0.05;
+}

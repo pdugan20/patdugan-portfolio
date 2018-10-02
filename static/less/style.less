@@ -1,24 +1,4 @@
-@color_light_gray:       #FAFAFA;
-@color_black:            #333333;
-@color_purple:           #4B2E83;
-@color_dark_gray:        #9E9E9E;
-@color_medium_gray:      #D7D7D7;
-
-@space_tiny:                 5px;
-@space_small:               15px;
-@space_medium:              20px;
-@space_large:               25px;
-@space_huge:                30px;
-
-@font_size_regular:         14px;
-@font_size_medium:          21px;
-
-@font_weight_regular:        400;
-@font_weight_bold:           600;
-
-@font_regular_lh:            1.4;
-
-@border: 1px solid @color_medium_gray;
+@import "less/variables";
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
@@ -40,7 +20,7 @@ a:hover {
 
 .body_outer_wrapper {
     display: block;
-    max-width: 525px;
+    max-width: 550px;
     margin: @space_large auto;
 }
 
@@ -69,6 +49,13 @@ a:hover {
     font-weight: @font_weight_regular;
     color: @color_dark_gray;
     font-size: @font_size_regular;
+}
+
+.back_link:before {
+    content: "\2039";
+    color: @color_dark_gray;
+    padding-right: @space_tiny;
+    font-size: 18px;
 }
 
 .section_header {

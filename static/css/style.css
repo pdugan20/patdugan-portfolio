@@ -15,7 +15,7 @@ a:hover {
 }
 .body_outer_wrapper {
   display: block;
-  max-width: 525px;
+  max-width: 550px;
   margin: 25px auto;
 }
 .image_wrapper img {
@@ -39,6 +39,12 @@ a:hover {
   font-weight: 400;
   color: #9E9E9E;
   font-size: 14px;
+}
+.back_link:before {
+  content: "\2039";
+  color: #9E9E9E;
+  padding-right: 5px;
+  font-size: 18px;
 }
 .section_header {
   border-bottom: 1px solid #D7D7D7;
