@@ -77,7 +77,6 @@ li.forward_li {
   margin-top: 0;
 }
 .text_block.list_text {
-  padding-left: 20px;
   padding-top: 2px;
   font-weight: initial;
 }
@@ -85,7 +84,6 @@ li.forward_li {
   display: initial;
 }
 .list_item_title {
-  padding-left: 5px;
   display: inline;
 }
 .list_item_metadata {
@@ -104,7 +102,11 @@ li.forward_li {
 }
 .section_list li {
   list-style-type: decimal;
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 5px;
+}
+.section_list {
+  margin-left: 15px;
 }
 .text_block_link {
   font-weight: initial;
@@ -145,9 +147,5 @@ li:hover .text_block.list_text {
   .text_block.list_text {
     text-indent: 0;
     padding-left: 0;
-  }
-  .section_list li {
-    text-indent: -20px;
-    padding-left: 20px;
   }
 }

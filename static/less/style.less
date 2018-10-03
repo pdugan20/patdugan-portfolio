@@ -95,7 +95,6 @@ li.forward_li {
 }
 
 .text_block.list_text {
-    padding-left: @space_medium;
     padding-top: 2px;
     font-weight: initial;
 }
@@ -105,7 +104,6 @@ li.forward_li {
 }
 
 .list_item_title {
-    padding-left: @space_tiny;
     display: inline;
 }
 
@@ -128,7 +126,12 @@ li.forward_li {
 
 .section_list li {
     list-style-type: decimal;
-    list-style-position: inside;
+    list-style-position: outside;
+    padding-left: 5px;
+}
+
+.section_list {
+    margin-left: 15px;
 }
 
 .text_block_link {
@@ -181,10 +184,5 @@ li:hover .text_block.list_text {
     .text_block.list_text {
         text-indent: 0;
         padding-left: 0;
-    }
-
-    .section_list li {
-        text-indent: -@space_medium;
-        padding-left: @space_medium;
     }
 }
