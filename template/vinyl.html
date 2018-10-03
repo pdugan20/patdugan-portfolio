@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="/css/vinyl.css">
 {% endblock %}
 {% block content %}
-                <div class="section_header top_header">Vinyl Collection</div>
+                <div class="section_header top_header"><a href="/" class="back_arrow"></a>Vinyl Collection</div>
                 <div class="text_block">I love listening to vinyl and currently have <a href="https://www.discogs.com/user/patdugan/collection" target="_blank">{{record_collection|length}} records</a> in my collection. I listen on a <a href="https://www.radiomuseum.org/r/sony_str_1800str180.html" target="_blank">Sony STR-1800</a> receiver with a <a href="https://www.vinylengine.com/library/sony/ps-3300.shtml" target="_blank">Sony PS-3300</a> turntable.</div>
                 <div class="record_collection_wrapper">
 {% for record in record_collection %}

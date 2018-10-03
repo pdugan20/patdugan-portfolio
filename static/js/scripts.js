@@ -1,3 +1,3 @@
-$(function () {
+$(function() {
     $('.image_wrapper').fluidbox();
 });

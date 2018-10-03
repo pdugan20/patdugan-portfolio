@@ -20,7 +20,7 @@ a:hover {
 
 .body_outer_wrapper {
     display: block;
-    max-width: 600px;
+    max-width: 575px;
     margin: @space_large auto;
 }
 
@@ -79,12 +79,24 @@ li.forward_li {
     font-size: @font_size_large;
     font-weight: @font_weight_bold;
     margin-bottom: @space_small;
+    margin-top: @space_huge;
     padding-bottom: @space_tiny - 1px;
+}
+
+.back_arrow:before {
+    content: "\2039";
+    padding-right: @space_tiny;
+    font-size: @font_size_large + 2px;
+    line-height: @font_tiny_lh;
+}
+
+.section_header.top_header {
+    margin-top: 0;
 }
 
 .text_block.list_text {
     padding-left: @space_medium;
-    padding-top: @space_tiny;
+    padding-top: 2px;
     font-weight: initial;
 }
 

@@ -1,0 +1,21 @@
+@import "less/variables";
+
+.image_wrapper.desktop_inline {
+    width: 48.9%;
+    display: inline-block;
+    margin-right: @space_tiny;
+}
+
+.image_group {
+    margin-bottom: @space_small;
+
+    img {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .image_group {
+        padding: 0 @space_huge;
+    }
+}

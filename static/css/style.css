@@ -15,7 +15,7 @@ a:hover {
 }
 .body_outer_wrapper {
   display: block;
-  max-width: 600px;
+  max-width: 575px;
   margin: 25px auto;
 }
 .image_wrapper img {
@@ -64,11 +64,21 @@ li.forward_li {
   font-size: 21px;
   font-weight: 600;
   margin-bottom: 15px;
+  margin-top: 30px;
   padding-bottom: 4px;
+}
+.back_arrow:before {
+  content: "\2039";
+  padding-right: 5px;
+  font-size: 23px;
+  line-height: 1.2;
+}
+.section_header.top_header {
+  margin-top: 0;
 }
 .text_block.list_text {
   padding-left: 20px;
-  padding-top: 5px;
+  padding-top: 2px;
   font-weight: initial;
 }
 .list_link {

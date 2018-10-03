@@ -1,0 +1,16 @@
+.image_wrapper.desktop_inline {
+  width: 48.9%;
+  display: inline-block;
+  margin-right: 5px;
+}
+.image_group {
+  margin-bottom: 15px;
+}
+.image_group img {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 667px) {
+  .image_group {
+    padding: 0 30px;
+  }
+}
