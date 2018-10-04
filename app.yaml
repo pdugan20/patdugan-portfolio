@@ -2,8 +2,7 @@ runtime: python27
 api_version: 1
 threadsafe: false
 
-# default_expiration: "7d"
-default_expiration: "1m"
+default_expiration: "7d"
 
 handlers:
 - url: /images

@@ -5,6 +5,8 @@ import vinyl
 
 from google.appengine.ext.webapp.util import run_wsgi_app
 
+CURRENT_APP_VERSION = os.environ['CURRENT_VERSION_ID'].split('.', 1)[1]
+
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.join(
         os.path.dirname(__file__), 'template')))
@@ -14,18 +16,27 @@ jinja_environment.lstrip_blocks = True
 
 class HomePage(webapp2.RequestHandler):
     def get(self):
+        template_values = {
+            'app_version': CURRENT_APP_VERSION,
+        }
         path = jinja_environment.get_template('index.html')
-        self.response.out.write(path.render())
+        self.response.out.write(path.render(template_values))
 
 class QuoraMessagesPage(webapp2.RequestHandler):
     def get(self):
+        template_values = {
+            'app_version': CURRENT_APP_VERSION,
+        }
         path = jinja_environment.get_template('quora_messages.html')
-        self.response.out.write(path.render())
+        self.response.out.write(path.render(template_values))
 
 class QuoraAdsManagerPage(webapp2.RequestHandler):
     def get(self):
+        template_values = {
+            'app_version': CURRENT_APP_VERSION,
+        }
         path = jinja_environment.get_template('quora_ads_manager.html')
-        self.response.out.write(path.render())
+        self.response.out.write(path.render(template_values))
 
 application = webapp2.WSGIApplication([
     ('/vinyl', vinyl.VinylPage),

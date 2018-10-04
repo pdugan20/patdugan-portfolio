@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% block title %}Patrick Dugan{% endblock %}
+{% block page_css %}
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?{{ app_version }}">
+{% endblock %}
 {% block content %}
                 <div class="image_wrapper"><img src="/images/me.jpg" alt="A photo of my Harley and I taken by my friend Katie Hendricks."></div>
                 <div class="text_block">Hi! My name is Patrick Dugan and I lead the advertising and monetization design team at <a href="https://www.quora.com/profile/Patrick-Dugan-3" target="_blank">Quora</a>.</div>
