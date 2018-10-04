@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block title %}{{ super() }}'s Vinyl Collection{% endblock %}
 {% block page_css %}
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?{{ app_version }}">
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/vinyl.css?{{ app_version }}">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?v={{ app_version }}">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/vinyl.css?v={{ app_version }}">
 {% endblock %}
 {% block content %}
                 <div class="section_header top_header"><a href="/" class="back_arrow"></a>Vinyl Collection</div>

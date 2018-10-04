@@ -1,10 +1,9 @@
-{% extends "base.html" %}
+{% extends "project_base.html" %}
 {% block title %}Quora Messages{% endblock %}
 {% block page_css %}
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?{{ app_version }}">
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/project.css?{{ app_version }}">
-        <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/css/fluidbox.min.css">
-{% endblock %}
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?v={{ app_version }}">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/project.css?v={{ app_version }}">
+        {{ super() }}{% endblock %}
 {% block content %}
                 <div class="section_header top_header"><a href="/" class="back_arrow"></a>Quora Messages</div>
                 <div class="text_block">In the summer of 2018 I led the design and development of a redesign of Quora Messages.</div>
@@ -18,10 +17,4 @@
 {% block footer %}
                     <li class="back_li"><a class="back_link" href="/">Back Home</a></li>
                     <li class="forward_li"><a class="forward_link" href="/project/quora-ads-manager">Next Project</a></li>
-{% endblock %}
-{% block js %}
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/js/jquery.fluidbox.min.js"></script>
-    <script type="text/javascript" src="/js/scripts.js"></script>
 {% endblock %}
