@@ -5,6 +5,8 @@ import webapp2
 
 from google.appengine.api import urlfetch
 
+CURRENT_APP_VERSION = os.environ['CURRENT_VERSION_ID'].split('.', 1)[1]
+
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.join(
         os.path.dirname(__file__), 'template')))
@@ -53,6 +55,7 @@ class VinylPage(webapp2.RequestHandler):
             recordCollection.append(currentRecord)
 
         template_values = {
+            'app_version': CURRENT_APP_VERSION,
             'record_collection': recordCollection,
         }
 
