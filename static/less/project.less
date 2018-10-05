@@ -12,16 +12,45 @@
 
 .image_group.inline_group {
     a:first-child { 
-        margin-right: 20px;
+        margin-right: @space_medium;
     }
 }
 
+.photo_description {
+    color: @color_dark_gray;
+    font-size: @font_size_regular;
+    margin-bottom: @space_medium;
+}
+
 .image_group {
-    margin-bottom: @space_small;
+    margin: @space_huge 0 @space_large 0;
 
     img {
         margin-bottom: 0;
     }
+}
+
+.fluidbox__overlay {
+    background-color: rgba(255,255,255,0.9);
+}
+
+.text_block.list_intro {
+    margin-bottom: @space_small - @space_tiny;
+}
+
+.section_list.project_list {
+    margin-left: @space_medium * 2;
+    margin-bottom: @space_medium;
+
+    li {
+        list-style-type: disc;
+        padding-bottom: @space_tiny;
+    }
+}
+
+.naked_link {
+    font-weight: @font_weight_regular;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 667px) {
