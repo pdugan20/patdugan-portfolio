@@ -14,27 +14,22 @@ jinja_environment = jinja2.Environment(
 jinja_environment.trim_blocks = True
 jinja_environment.lstrip_blocks = True
 
+template_values = {
+    'app_version': CURRENT_APP_VERSION,
+}
+
 class HomePage(webapp2.RequestHandler):
     def get(self):
-        template_values = {
-            'app_version': CURRENT_APP_VERSION,
-        }
         path = jinja_environment.get_template('index.html')
         self.response.out.write(path.render(template_values))
 
 class QuoraMessagesPage(webapp2.RequestHandler):
     def get(self):
-        template_values = {
-            'app_version': CURRENT_APP_VERSION,
-        }
         path = jinja_environment.get_template('quora_messages.html')
         self.response.out.write(path.render(template_values))
 
 class QuoraAdsManagerPage(webapp2.RequestHandler):
     def get(self):
-        template_values = {
-            'app_version': CURRENT_APP_VERSION,
-        }
         path = jinja_environment.get_template('quora_ads_manager.html')
         self.response.out.write(path.render(template_values))
 
