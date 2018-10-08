@@ -7,6 +7,11 @@ from google.appengine.api import urlfetch
 
 CURRENT_APP_VERSION = os.environ['CURRENT_VERSION_ID'].split('.', 1)[1]
 
+DISCOGS_API = 'https://api.discogs.com/users/patdugan/collection/folders/0/releases'
+CONSUMER_KEY = 'qzhFhUTUMydigBFJCdGU'
+CONSUMER_SECRET = 'jVlHbmkHintWgTXXEIuENaNLwzoYoJwE'
+PAGINATION_BASE = '150'
+
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.join(
         os.path.dirname(__file__), 'template')))
@@ -16,15 +21,10 @@ jinja_environment.lstrip_blocks = True
 
 class VinylPage(webapp2.RequestHandler):
     def get(self):
-        discogsUrl = 'https://api.discogs.com/users/patdugan/collection/folders/0/releases'
-
-        paginationBase = '150'
-        consumerKey = 'qzhFhUTUMydigBFJCdGU'
-        consumerSecret = 'jVlHbmkHintWgTXXEIuENaNLwzoYoJwE'
-
-        discogsUrl += '?per_page=' + paginationBase
-        discogsUrl += '&key=' + consumerKey
-        discogsUrl += '&secret=' + consumerSecret
+        discogsUrl = DISCOGS_API
+        discogsUrl += '?per_page=' + PAGINATION_BASE
+        discogsUrl += '&key=' + CONSUMER_KEY
+        discogsUrl += '&secret=' + CONSUMER_SECRET
 
         vinylJsonRaw = urlfetch.fetch(discogsUrl)
         vinylJsonObject = json.loads(vinylJsonRaw.content)
@@ -39,7 +39,7 @@ class VinylPage(webapp2.RequestHandler):
             recordReleaseYear = lp['basic_information']['year'],
             albumArt = lp['basic_information']['thumb'],
             recordLabel = lp['basic_information']['labels'][0]['name'],
-            discogsUrl = 'http://www.discogs.com/release/' + str(recordId)
+            recordUrl = 'http://www.discogs.com/release/' + str(recordId)
             recordReleaseYear = int(recordReleaseYear[0])
 
             currentRecord = [
@@ -47,7 +47,7 @@ class VinylPage(webapp2.RequestHandler):
                 recordName,
                 artistName,
                 recordReleaseYear,
-                discogsUrl,
+                recordUrl,
                 albumArt[0],
                 recordLabel[0]
             ]
