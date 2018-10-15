@@ -25,23 +25,23 @@
 
     -->
     <head>
-	    <title><$BlogPageTitle$></title>
-	    <meta name="description" content="<$BlogDescription$>">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><$BlogPageTitle$></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" href="https://patdugan.me/images/favicon.png" type="image/png"/>
         <link rel="alternate" type="application/rss+xml" href="https://blog.patdugan.me/feeds/posts/default?alt=rss"/>
-	    <link rel="icon" href="https://patdugan.me/images/favicon.png" type="image/png">
-	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600">
-	    <link rel="stylesheet" type="text/css" media="screen" href="https://patdugan.me/css/reset.css">
-	    <link rel="stylesheet" type="text/css" media="screen" href="https://patdugan.me/css/style.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="https://patdugan.me/css/blog.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="https://patdugan.me/css/reset.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="https://patdugan.me/css/style.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="https://patdugan.me/css/blog.css?v=14"/>
     </head>
     <body>
         <div class="body_outer_wrapper">
             <div class="content">
-                <Blogger><BlogItemTitle><div class="section_header"><a href="<$BlogItemPermalinkURL$>"><$BlogItemTitle$></a></div></BlogItemTitle>
-				<div><$BlogItemBody$></div>
-                <BlogDateHeader><a class="timestamp" href="<$BlogItemPermalinkURL$>">Posted on <$BlogDateHeaderDate$></a></BlogDateHeader>
-                <ItemPage></ItemPage></Blogger>
+                <div class="small_header"><a href="/">Patrick Dugan's Blog</a></div>
+                <Blogger><article><BlogItemTitle><h1 class="section_header"><a href="<$BlogItemPermalinkURL$>"><$BlogItemTitle$></a></h1></BlogItemTitle>
+                <div><$BlogItemBody$></div>
+                <BlogDateHeader><div class="timestamp">Posted by <a href="https://www.twitter.com/doog" rel="author">Patrick Dugan</a> on <time datetime="<$BlogDateHeaderDate$>"><a href="<$BlogItemPermalinkURL$>"><$BlogItemDateTime$></a></time>.</div></BlogDateHeader>
+                <ItemPage><!--<div class="fb-comments" data-href="<$BlogItemPermalinkURL$>" width="554" data-numposts="5"></div>--></ItemPage></article></Blogger>
             </div>
             <div class="footer">
                 <ul>
@@ -51,4 +51,12 @@
             </div>
         </div>
     </body>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=136609459636&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 </html>

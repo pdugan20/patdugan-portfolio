@@ -1,9 +1,12 @@
 {% extends "project_base.html" %}
 {% block title %}Quora Messages{% endblock %}
+{% block share_title %}Quora Messages{% endblock %}
+{% block page_url %}{{ super() }}/project/quora-messages{% endblock %}
+{% block page_description %}Patrick Dugan led a project in 2018 to redesign and rebuild Quora's messaging platform.{% endblock %}
 {% block page_css %}
         {{ super() }}
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?v={{ app_version }}">
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/project.css?v={{ app_version }}">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?v={{ app_version }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/project.css?v={{ app_version }}"/>
 {% endblock %}
 {% block content %}
                 <div class="section_header top_header"><a href="/" class="back_arrow"></a>Quora Messages</div>

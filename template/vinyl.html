@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% block title %}{{ super() }}'s Vinyl Collection{% endblock %}
+{% block share_title %}{{ super() }}'s Vinyl Collection{% endblock %}
+{% block page_url %}{{ super() }}/project/vinyl{% endblock %}
+{% block page_description %}Patrick Dugan has been collecting and listening to vinyl since 2012.{% endblock %}
 {% block page_css %}
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?v={{ app_version }}">
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/vinyl.css?v={{ app_version }}">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?v={{ app_version }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/vinyl.css?v={{ app_version }}"/>
 {% endblock %}
 {% block content %}
                 <div class="section_header top_header"><a href="/" class="back_arrow"></a>Vinyl Collection</div>

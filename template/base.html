@@ -27,10 +27,21 @@
     <head>
 {% block head %}
         <title>{% block title %}Patrick Dugan{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/images/favicon.png" type="image/png">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600">
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" href="/images/favicon.png" type="image/png"/>
+        <link rel="alternate" type="application/rss+xml" href="https://blog.patdugan.me/feeds/posts/default?alt=rss"/>
+        <!-- twitter metadata -->
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:creator" content="@doog"/>
+        <!-- opengraph metadata -->
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="{% block page_url %}https://www.patdugan.me{% endblock %}"/>
+        <meta property="og:title" content="{% block share_title %}Patrick Dugan{% endblock %}"/>
+        <meta property="og:description" content="{% block page_description %}Patrick Dugan is a designer at Quora who previously worked at Google and Nextdoor. He was also a member of the Designer Fund's professional development program, Bridge.{% endblock %}"/>
+        <meta property="og:image" content="{% block card_image %}https://www.patdugan.me/images/me.jpg{% endblock %}"/>
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/reset.css"/>
 {% block page_css %}{% endblock %}
 {% endblock %}
     </head>
