@@ -18,7 +18,7 @@ ol {
 .timestamp {
     color: @color_dark_gray;
     font-size: @font_size_regular;
-    margin-bottom: @space_medium;
+    margin-bottom: @space_small + 2px;
     margin-top: @space_small - @space_tiny;
     
     a {
@@ -43,15 +43,14 @@ img {
 .section_header {
     border-top: @border;
     border-bottom: none;
-    font-size: @font_size_large;
-    margin-top: @space_medium;
+    margin-top: 0;
     padding-bottom: 0;
     margin-bottom: @space_tiny;
     padding-top: @space_small;
 }
 
 .small_header {
-    margin-bottom: -@space_small;
+    margin-bottom: @space_tiny;
 
     a {
         color: @color_dark_gray;
@@ -68,7 +67,7 @@ img {
     border: @border;
     border-radius: 3px;
     padding: @space_tiny * 2;
-    background-color: #F5F5F5;
+    background-color: #F7F7F7;
 }
 
 .twitter-tweet {
@@ -94,13 +93,11 @@ i {
 
     .body_outer_wrapper {
         padding: @space_huge;
+        padding-bottom: 0;
     }
 
-    .fb-comments {
-        border: none;
-        border-radius: 0;
-        padding: 0;
-        background-color: initial;
+    .comments_wrapper {
+        display: none;
     }
 
     .footer {

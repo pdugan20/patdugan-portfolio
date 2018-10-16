@@ -13,7 +13,7 @@ ol li {
 .timestamp {
   color: #9E9E9E;
   font-size: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   margin-top: 10px;
 }
 .timestamp a {
@@ -33,14 +33,13 @@ img {
 .section_header {
   border-top: 1px solid #D7D7D7;
   border-bottom: none;
-  font-size: 21px;
-  margin-top: 20px;
+  margin-top: 0;
   padding-bottom: 0;
   margin-bottom: 5px;
   padding-top: 15px;
 }
 .small_header {
-  margin-bottom: -15px;
+  margin-bottom: 5px;
 }
 .small_header a {
   color: #9E9E9E;
@@ -54,7 +53,7 @@ img {
   border: 1px solid #D7D7D7;
   border-radius: 3px;
   padding: 10px;
-  background-color: #F5F5F5;
+  background-color: #F7F7F7;
 }
 .twitter-tweet {
   display: block;
@@ -76,12 +75,10 @@ i {
   }
   .body_outer_wrapper {
     padding: 30px;
+    padding-bottom: 0;
   }
-  .fb-comments {
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    background-color: initial;
+  .comments_wrapper {
+    display: none;
   }
   .footer {
     margin: 0;

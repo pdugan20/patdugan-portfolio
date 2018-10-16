@@ -48,12 +48,14 @@ a:hover {
   color: #9E9E9E;
   padding-right: 5px;
   font-size: 18px;
+  line-height: 1.2;
 }
 .forward_link:after {
   content: "\203A";
   color: #9E9E9E;
   padding-left: 5px;
   font-size: 18px;
+  line-height: 1.2;
 }
 li.forward_li {
   float: right;

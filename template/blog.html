@@ -25,38 +25,41 @@
 
     -->
     <head>
-        <title><$BlogPageTitle$></title>
+        <title><MainPage><$BlogPageTitle$></MainPage><Blogger><ItemPage><$BlogItemTitle$></ItemPage></Blogger></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="icon" href="https://patdugan.me/images/favicon.png" type="image/png"/>
         <link rel="alternate" type="application/rss+xml" href="https://blog.patdugan.me/feeds/posts/default?alt=rss"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600"/>
+        <!-- twitter metadata -->
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:creator" content="@doog"/>
+        <!-- opengraph metadata -->
+        <MainPage><meta property="og:type" content="website"/></MainPage><Blogger><ItemPage><meta property="og:type" content="article"/></ItemPage></Blogger>
+        <meta property="og:url" content="<MainPage>https://blog.patdugan.me</MainPage><Blogger><ItemPage><$BlogItemPermalinkURL$></ItemPage></Blogger>"/>
+        <meta property="og:title" content="<MainPage><$BlogPageTitle$></MainPage><Blogger><ItemPage><$BlogItemTitle$></ItemPage></Blogger>"/>
+        <meta property="og:description" content="<MainPage><$BlogDescription$></MainPage><Blogger><ItemPage><$BlogDescription$></ItemPage></Blogger>"/>
+        <meta property="og:image" content="https://www.patdugan.me/images/me.jpg"/>
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600"/>
         <link rel="stylesheet" type="text/css" media="screen" href="https://patdugan.me/css/reset.css"/>
         <link rel="stylesheet" type="text/css" media="screen" href="https://patdugan.me/css/style.css"/>
-        <link rel="stylesheet" type="text/css" media="screen" href="https://patdugan.me/css/blog.css?v=14"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="https://patdugan.me/css/blog.css?v=19"/>
     </head>
     <body>
         <div class="body_outer_wrapper">
             <div class="content">
-                <div class="small_header"><a href="/">Patrick Dugan's Blog</a></div>
+                <div class="small_header">
+                    <a href="/">Patrick Dugan's Blog</a>
+                </div>
                 <Blogger><article><BlogItemTitle><h1 class="section_header"><a href="<$BlogItemPermalinkURL$>"><$BlogItemTitle$></a></h1></BlogItemTitle>
                 <div><$BlogItemBody$></div>
-                <BlogDateHeader><div class="timestamp">Posted by <a href="https://www.twitter.com/doog" rel="author">Patrick Dugan</a> on <time datetime="<$BlogDateHeaderDate$>"><a href="<$BlogItemPermalinkURL$>"><$BlogItemDateTime$></a></time>.</div></BlogDateHeader>
-                <ItemPage><!--<div class="fb-comments" data-href="<$BlogItemPermalinkURL$>" width="554" data-numposts="5"></div>--></ItemPage></article></Blogger>
+                <BlogDateHeader><div class="timestamp">Posted by <a href="https://www.twitter.com/doog" rel="author">Patrick Dugan</a> on <time datetime="<$BlogDateHeaderDate$>"><a href="<$BlogItemPermalinkURL$>"><$BlogItemDateTime$></a></time>.</div></BlogDateHeader></article></Blogger>
             </div>
             <div class="footer">
                 <ul>
-                    <OlderPosts><li class="back_li"><a class="back_link" href="<$OlderPosts$>">Older Posts</a></li></OlderPosts>
-                    <NewerPosts><li class="forward_li"><a class="forward_link" href="<$NewerPosts$>">Newer Posts</a></li></NewerPosts>
+                    <OlderPosts><li class="back_li"><a class="back_link" href="<$OlderPosts$>"><MainPage>Older Posts</MainPage><Blogger><ItemPage>Previous Post</ItemPage></Blogger></a></li></OlderPosts>
+                    <NewerPosts><li class="forward_li"><a class="forward_link" href="<$NewerPosts$>"><MainPage>Newer Posts</MainPage><Blogger><ItemPage>Next Post</ItemPage></Blogger></a></li></NewerPosts>
                 </ul>
             </div>
         </div>
     </body>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=136609459636&autoLogAppEvents=1';
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
 </html>
