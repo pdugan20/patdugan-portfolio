@@ -20,7 +20,7 @@ a:hover {
 
 .body_outer_wrapper {
     display: block;
-    max-width: 575px;
+    max-width: @container_width;
     margin: @space_large auto;
 }
 
@@ -56,19 +56,19 @@ a:hover {
 }
 
 .back_link:before {
-    content: "\2039";
+    content: @back_arrow;
     color: @color_dark_gray;
     padding-right: @space_tiny;
     font-size: @font_size_medium;
-    line-height: 1.2;
+    line-height: @font_tiny_lh;
 }
 
 .forward_link:after {
-    content: "\203A";
+    content: @forward_arrow;
     color: @color_dark_gray;
     padding-left: @space_tiny;
     font-size: @font_size_medium;
-    line-height: 1.2;
+    line-height: @font_tiny_lh;
 }
 
 li.forward_li {
@@ -86,7 +86,7 @@ li.forward_li {
 }
 
 .back_arrow:before {
-    content: "\2039";
+    content: @back_arrow;
     padding-right: @space_tiny;
     font-size: @font_size_large + 2px;
     line-height: @font_tiny_lh;
@@ -117,7 +117,7 @@ li.forward_li {
 }
 
 .list_item_metadata:before {
-    content: "\00b7";
+    content: @middot;
     color: @color_dark_gray;
     padding: 0 @space_tiny 0 (@space_tiny - 1px);
 }
