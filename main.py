@@ -36,13 +36,8 @@ class QuoraAdsManagerPage(webapp2.RequestHandler):
 
 class VinylPage(webapp2.RequestHandler):
     def get(self):
-        recordCollection = discogs.record_collection()
-        artistList = lastfm.weekly_artists()
-        template_values = {
-            'app_version': CURRENT_APP_VERSION,
-            'record_collection': recordCollection,
-            'artist_list': artistList,
-        }
+        template_values['record_collection'] = discogs.record_collection()
+        template_values['artist_list'] = lastfm.weekly_artists()
         path = jinja_environment.get_template('vinyl.html')
         self.response.out.write(path.render(template_values))
 

@@ -11,7 +11,7 @@ def weekly_artists():
     lastFmUrl = LASTFM_API
     lastFmUrl += '?method=' + API_METHOD
     lastFmUrl += '&user=' + 'pdugan20'
-    lastFmUrl += '&from=' + str(time.time() - 604800)
+    lastFmUrl += '&from=' + str(time.time() - 1209600) # 2 weeks
     lastFmUrl += '&to=' + str(time.time())
     lastFmUrl += '&api_key=' + API_KEY
     lastFmUrl += '&format=' + 'json'
@@ -28,7 +28,6 @@ def weekly_artists():
             artist['playcount'],
             artist['url'],
         ]
-
         artistList.append(currentArtist)
 
     return artistList[:5]
