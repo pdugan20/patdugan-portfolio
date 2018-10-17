@@ -1,7 +1,8 @@
 import os
 import jinja2
 import webapp2
-import vinyl
+import lastfm
+import discogs
 
 from google.appengine.ext.webapp.util import run_wsgi_app
 
@@ -33,8 +34,20 @@ class QuoraAdsManagerPage(webapp2.RequestHandler):
         path = jinja_environment.get_template('quora_ads_manager.html')
         self.response.out.write(path.render(template_values))
 
+class VinylPage(webapp2.RequestHandler):
+    def get(self):
+        recordCollection = discogs.record_collection()
+        artistList = lastfm.weekly_artists()
+        template_values = {
+            'app_version': CURRENT_APP_VERSION,
+            'record_collection': recordCollection,
+            'artist_list': artistList,
+        }
+        path = jinja_environment.get_template('vinyl.html')
+        self.response.out.write(path.render(template_values))
+
 application = webapp2.WSGIApplication([
-    ('/vinyl', vinyl.VinylPage),
+    ('/vinyl', VinylPage),
     ('/project/quora-messages', QuoraMessagesPage),
     ('/project/quora-ads-manager', QuoraAdsManagerPage),
     ('/', HomePage)
