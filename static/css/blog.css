@@ -55,10 +55,21 @@ img {
 }
 i {
   font-style: italic;
+  display: inline-block;
+}
+blockquote {
+  font-style: italic;
   border-left: 1px solid #D7D7D7;
   border-width: 2px;
   display: inline-block;
   padding-left: 15px;
+}
+.blog_img {
+  display: block;
+  margin: 0 auto;
+}
+.blog_img.half_width {
+  width: 40%;
 }
 @media only screen and (max-width: 667px) {
   .section_header {

@@ -70,10 +70,24 @@ img {
 
 i {
     font-style: italic;
+    display: inline-block;
+}
+
+blockquote {
+    font-style: italic;
     border-left: @border;
     border-width: 2px;
     display: inline-block;
     padding-left: @space_small;
+}
+
+.blog_img {
+    display: block;
+    margin: 0 auto;
+}
+
+.blog_img.half_width {
+    width: 40%;
 }
 
 @media only screen and (max-width: 667px) {
