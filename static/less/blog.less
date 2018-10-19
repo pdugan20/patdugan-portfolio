@@ -19,7 +19,7 @@ ol {
     color: @color_dark_gray;
     font-size: @font_size_regular;
     margin-bottom: @space_small + 2px;
-    margin-top: @space_small - @space_tiny;
+    margin-top: @space_smaller;
     
     a {
         font-weight: @font_weight_regular;
@@ -89,11 +89,11 @@ blockquote {
     width: 40%;
 }
 
-@media only screen and (max-width: 667px) {
+@media only screen and (max-width: @iphone_width) {
     .section_header {
         margin-left: 0;
         margin-right: 0;
-        margin-bottom: @space_small - @space_tiny;
+        margin-bottom: @space_smaller;
         line-height: @font_tiny_lh;
     }
 
