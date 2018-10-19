@@ -10,15 +10,15 @@
 {% block content %}
                 <div class="section_header top_header"><a href="/" class="back_arrow"></a>Vinyl Collection</div>
                 <div class="text_block">I really enjoy listening to records and currently have <a href="https://www.discogs.com/user/patdugan/collection" target="_blank">{{record_collection|length}}</a> in my collection. I listen on a <a href="https://www.radiomuseum.org/r/sony_str_1800str180.html" target="_blank">Sony STR-1800</a> receiver with a <a href="https://www.vinylengine.com/library/sony/ps-3300.shtml" target="_blank">Sony PS-3300</a> turntable.</div>
-                <div class="text_block">This past week I've been listening to{% for artist in artist_list %} <a href="{{ artist.2 }}" target="_blank">{{ artist.0 }}{% if not loop.last %}</a>,{% endif %}{% if loop.index == 4 %} and{% endif %}{% endfor %}</a>.</div>
+                <div class="text_block">This past week I've been listening to{% for artist in artist_list %} <a href="{{ artist.url }}" target="_blank">{{ artist.name }}{% if not loop.last %}</a>,{% endif %}{% if loop.index == 4 %} and{% endif %}{% endfor %}</a>.</div>
                 <div class="text_block">Check out my <a href="https://last.fm/user/pdugan20" target="_blank">last.fm profile</a> to learn more about the types of music I like.</div>
                 <div class="record_collection_wrapper">
 {% for record in record_collection %}
-                <a class="record_wrapper" href="{{ record.4 }}" target="_blank">
-                    <img class="record_cover" src="./images/vinyl/{{ record.0 }}.jpg" alt="{{ record.1 }}">
+                <a class="record_wrapper" href="{{ record.url }}" target="_blank">
+                    <img class="record_cover" src="./images/vinyl/{{ record.id }}.jpg" alt="{{ record.title }}">
                     <div class="record_metadata">
-                        <div class="record_name">{{ record.1 }}</div>
-                        <div class="artist_name">{{ record.2 }}, {{ record.3 }}</div>
+                        <div class="record_name">{{ record.title }}</div>
+                        <div class="artist_name">{{ record.artist }}, {{ record.year }}</div>
                     </div>
                 </a>
 {% endfor %}

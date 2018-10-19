@@ -19,13 +19,13 @@ def record_collection():
     recordList = []
 
     for lp in recordCollection:
-        currentRecord = [
-            lp['id'],
-            lp['basic_information']['title'],
-            lp['basic_information']['artists'][0]['name'].strip(' (2)'),
-            lp['basic_information']['year'],
-            DISCOGS_ALBUM_URL + str(lp['id']),
-        ]
-        recordList.append(currentRecord)
+        current_record_info = {
+            'id': lp['id'],
+            'title': lp['basic_information']['title'],
+            'artist': lp['basic_information']['artists'][0]['name'].strip(' (2)'),
+            'year': lp['basic_information']['year'],
+            'url': DISCOGS_ALBUM_URL + str(lp['id']),
+        }
+        recordList.append(current_record_info)
 
     return recordList

@@ -23,11 +23,11 @@ def weekly_artists():
     artistList = []
 
     for artist in weeklyArtistChart:
-        currentArtist = [
-            artist['name'],
-            artist['playcount'],
-            artist['url'],
-        ]
-        artistList.append(currentArtist)
+        current_artist_info = {
+            'name': artist['name'],
+            'playcount': artist['playcount'],
+            'url': artist['url'],
+        }
+        artistList.append(current_artist_info)
 
     return artistList[:5]
