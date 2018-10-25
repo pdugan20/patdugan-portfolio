@@ -20,6 +20,10 @@ handlers:
   static_files: static/crawler/robots.txt
   upload: static/crawler/robots.txt
 
+- url: /sitemap.xml
+  static_files: static/crawler/sitemap.xml
+  upload: static/crawler/sitemap.xml
+
 - url: .*
   script: main.py
   secure: always
