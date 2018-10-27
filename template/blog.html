@@ -47,15 +47,15 @@
         <link rel="stylesheet" type="text/css" media="screen" href="https://www.patdugan.me/css/blog.css?v=25"/>
         <link rel="stylesheet" type="text/css" media="screen" href="https://www.patdugan.me/css/project.css?v=2"/>
     </head>
-    <body>
+    <body itemscope itemtype="https://schema.org/Blog">
         <div class="body_outer_wrapper">
             <div class="content">
                 <div class="small_header">
                     <a href="/">Patrick Dugan's Blog</a>
                 </div>
-                <Blogger><article><BlogItemTitle><h1 class="section_header"><a href="<$BlogItemPermalinkURL$>"><$BlogItemTitle$></a></h1></BlogItemTitle>
-                <div><$BlogItemBody$></div>
-                <BlogDateHeader><div class="timestamp">Posted by <a href="https://www.patdugan.me" rel="author" target="_blank">Patrick Dugan</a> on <time datetime="<$BlogDateHeaderDate$>"><a href="<$BlogItemPermalinkURL$>"><$BlogItemDateTime$></a></time>.</div></BlogDateHeader></article></Blogger>
+                <Blogger><article itemprop="blogPosts" itemscope itemtype="https://schema.org/BlogPosting"><BlogItemTitle><h1 class="section_header" itemprop="headline"><a href="<$BlogItemPermalinkURL$>"><$BlogItemTitle$></a></h1></BlogItemTitle>
+                <div itemprop="articleBody"><$BlogItemBody$></div>
+                <BlogDateHeader><div class="timestamp">Posted by <a href="https://www.patdugan.me" rel="author" itemprop="author" target="_blank">Patrick Dugan</a> on <time datetime="<$BlogDateHeaderDate$>" itemprop="datePublished"><a href="<$BlogItemPermalinkURL$>"><$BlogItemDateTime$></a></time>.</div></BlogDateHeader></article></Blogger>
             </div>
             <div class="footer">
                 <ul>
