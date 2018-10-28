@@ -14,11 +14,12 @@
                 <div class="text_block">Check out my <a href="https://last.fm/user/pdugan20" target="_blank">last.fm profile</a> to learn more about the types of music I like.</div>
                 <div class="record_collection_wrapper">
 {% for record in record_collection %}
-                <a class="record_wrapper" href="{{ record.url }}" target="_blank">
-                    <img class="record_cover" src="./images/vinyl/{{ record.id }}.jpg" alt="{{ record.title }}">
+                <a class="record_wrapper" href="{{ record.url }}" target="_blank" itemscope itemtype="http://schema.org/MusicAlbum">
+                    <img class="record_cover" src="./images/vinyl/{{ record.id }}.jpg" alt="{{ record.title }}" itemprop="image">
+                    <link href="{{ record.url }}" itemprop="url"/>
                     <div class="record_metadata">
-                        <div class="record_name">{{ record.title }}</div>
-                        <div class="artist_name">{{ record.artist }}, {{ record.year }}</div>
+                        <div class="record_name" itemprop="name">{{ record.title }}</div>
+                        <div class="artist_name" itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup"><span itemprop="name">{{ record.artist }}</span>, {{ record.year }}</div>
                     </div>
                 </a>
 {% endfor %}

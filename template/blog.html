@@ -53,9 +53,22 @@
                 <div class="small_header">
                     <a href="/">Patrick Dugan's Blog</a>
                 </div>
-                <Blogger><article itemprop="blogPosts" itemscope itemtype="https://schema.org/BlogPosting"><BlogItemTitle><h1 class="section_header" itemprop="headline"><a href="<$BlogItemPermalinkURL$>"><$BlogItemTitle$></a></h1></BlogItemTitle>
+                <Blogger><article itemprop="blogPosts" itemscope itemtype="https://schema.org/BlogPosting"><BlogItemTitle><h1 class="section_header"><a href="<$BlogItemPermalinkURL$>" itemprop="mainEntityOfPage"><span itemprop="headline"><$BlogItemTitle$></span></a></h1></BlogItemTitle>
+                <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="https://www.patdugan.me/images/me.jpg"/>
+                    <meta itemprop="url" content="https://www.patdugan.me/images/me.jpg">
+                </div>
                 <div itemprop="articleBody"><$BlogItemBody$></div>
-                <BlogDateHeader><div class="timestamp">Posted by <a href="https://www.patdugan.me" rel="author" itemprop="author" target="_blank">Patrick Dugan</a> on <time datetime="<$BlogDateHeaderDate$>" itemprop="datePublished"><a href="<$BlogItemPermalinkURL$>"><$BlogItemDateTime$></a></time>.</div></BlogDateHeader></article></Blogger>
+                <BlogDateHeader><div class="timestamp">Posted by <a href="https://www.patdugan.me" rel="author" itemprop="author" itemscope itemtype="https://schema.org/Person" target="_blank"><span itemprop="name">Patrick Dugan</span></a> on <time datetime="<$BlogDateHeaderDate$>" itemprop="datePublished"><a href="<$BlogItemPermalinkURL$>"><$BlogItemDateTime$></a></time>.</div>
+                </BlogDateHeader><div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                        <img src="https://www.patdugan.me/images/me.jpg"/>
+                        <meta itemprop="url" content="https://www.patdugan.me/images/me.jpg">
+                    </div>
+                    <meta itemprop="name" content="Patrick Dugan's Blog">
+                </div>
+            </article>
+            </Blogger>
             </div>
             <div class="footer">
                 <ul>

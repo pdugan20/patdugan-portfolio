@@ -9,39 +9,42 @@
         <link rel="stylesheet" type="text/css" media="screen" href="/css/project.css?v={{ app_version }}"/>
 {% endblock %}
 {% block content %}
-                <div class="section_header top_header"><a href="/" class="back_arrow"></a>Quora Ads Manager</div>
-                <div class="text_block">Since early 2016, I have acted as the design lead for Quora's ad creation and performance monitoring tool, the Quora Ads Manager.</div>
-                <div class="text_block">I was the first designer to join Quora's ads team and was in a unique position to design the company's consumer facing ads and advertiser facing tooling from scratch.</div>
-                <div class="image_group">
-                    <a class="image_wrapper" href="/images/projects/quora_ads_manager/01.png?v={{ app_version }}">
-                        <img src="/images/projects/quora_ads_manager/01.png?v={{ app_version }}" alt="A photo of the performance overview page for the Quora Ads Manager.">
-                    </a>
-                    <div class="photo_description">The Campaign Overview screen for the Quora Ads Manager.</div>
+                <div class="section_header top_header" itemprop="headline"><a href="/" class="back_arrow"></a>Quora Ads Manager</div>
+                <link itemprop="mainEntityOfPage" href="/project/quora_ads_manager"/>
+                <div itemprop="text">
+                    <div class="text_block">Since early 2016, I have acted as the design lead for Quora's ad creation and performance monitoring tool, the Quora Ads Manager.</div>
+                    <div class="text_block">I was the first designer to join Quora's ads team and was in a unique position to design the company's consumer facing ads and advertiser facing tooling from scratch.</div>
+                    <div class="image_group">
+                        <a class="image_wrapper" href="/images/projects/quora_ads_manager/01.png?v={{ app_version }}">
+                            <img src="/images/projects/quora_ads_manager/01.png?v={{ app_version }}" alt="A photo of the performance overview page for the Quora Ads Manager.">
+                        </a>
+                        <div class="photo_description">The Campaign Overview screen for the Quora Ads Manager.</div>
+                    </div>
+                    <div class="text_block list_intro">The goals I set for designing Quora's Ads Manager were to:</div>
+                    <ul class="section_list project_list">
+                        <li>Design a system that would be able to rapidly grow and accommodate ongoing feature development</li>
+                        <li>Create a tool that would be easy for novice users to learn but that could also accommodate power users</li>
+                        <li>Align to industry standard conventions while also leveraging Quora's unique market positioning</li>
+                        <li>Design UI patterns that were reusable and extensible across a multitude of use-cases</li>
+                    </ul>
+                    <div class="image_group">
+                        <a class="image_wrapper" href="/images/projects/quora_ads_manager/02.png?v={{ app_version }}">
+                            <img src="/images/projects/quora_ads_manager/02.png?v={{ app_version }}" alt="A photo of the Ad Set creation page for the Quora Ads Manager.">
+                        </a>
+                        <div class="photo_description">The Create Ad Set screen for the Quora Ads Manager.</div>
+                    </div>
+                    <div class="text_block">Over the past 3 years, I have designed and helped build out Quora's Ads Manager in ways that have and continue to meet the goals outlined above.</div>
+                    <div class="text_block">Quora now has over 1,000 active advertisers and I attribute a least a portion of that success to the work that I and the team I lead have done to support those advertisers in deriving value from Quora.</div>
+                    <div class="image_group">
+                        <a class="image_wrapper" href="/images/projects/quora_ads_manager/03.png?v={{ app_version }}">
+                            <img src="/images/projects/quora_ads_manager/03.png?v={{ app_version }}" alt="A photo of the Ad creation page for the Quora Ads Manager.">
+                        </a>
+                        <div class="photo_description">The Create Ad screen for the Quora Ads Manager.</div>
+                    </div>
+                    <div class="text_block">Give the Quora Ads Manager a try for yourself by visiting <a href="https://www.quora.com/business" class="naked_link" target="_blank" itemprop="relatedLink">quora.com/business</a>.</div>
                 </div>
-                <div class="text_block list_intro">The goals I set for designing Quora's Ads Manager were to:</div>
-                <ul class="section_list project_list">
-                    <li>Design a system that would be able to rapidly grow and accommodate ongoing feature development</li>
-                    <li>Create a tool that would be easy for novice users to learn but that could also accommodate power users</li>
-                    <li>Align to industry standard conventions while also leveraging Quora's unique market positioning</li>
-                    <li>Design UI patterns that were reusable and extensible across a multitude of use-cases</li>
-                </ul>
-                <div class="image_group">
-                    <a class="image_wrapper" href="/images/projects/quora_ads_manager/02.png?v={{ app_version }}">
-                        <img src="/images/projects/quora_ads_manager/02.png?v={{ app_version }}" alt="A photo of the Ad Set creation page for the Quora Ads Manager.">
-                    </a>
-                    <div class="photo_description">The Create Ad Set screen for the Quora Ads Manager.</div>
-                </div>
-                <div class="text_block">Over the past 3 years, I have designed and helped build out Quora's Ads Manager in ways that have and continue to meet the goals outlined above.</div>
-                <div class="text_block">Quora now has over 1,000 active advertisers and I attribute a least a portion of that success to the work that I and the team I lead have done to support those advertisers in deriving value from Quora.</div>
-                <div class="image_group">
-                    <a class="image_wrapper" href="/images/projects/quora_ads_manager/03.png?v={{ app_version }}">
-                        <img src="/images/projects/quora_ads_manager/03.png?v={{ app_version }}" alt="A photo of the Ad creation page for the Quora Ads Manager.">
-                    </a>
-                    <div class="photo_description">The Create Ad screen for the Quora Ads Manager.</div>
-                </div>
-                <div class="text_block">Give the Quora Ads Manager a try for yourself by visiting <a href="https://www.quora.com/business" class="naked_link" target="_blank">quora.com/business</a>.</div>
 {% endblock %}
 {% block footer %}
-                    <li class="back_li"><a class="back_link" href="/project/quora-messages">Previous Project</a></li>
-                    <li class="forward_li"><a class="forward_link" href="/">Back Home</a></li>
+                    <li class="back_li"><a class="back_link" href="/project/quora-messages" itemprop="relatedLink">Previous Project</a></li>
+                    <li class="forward_li"><a class="forward_link" href="/" itemprop="relatedLink">Back Home</a></li>
 {% endblock %}

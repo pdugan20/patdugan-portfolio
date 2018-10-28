@@ -9,43 +9,46 @@
         <link rel="stylesheet" type="text/css" media="screen" href="/css/project.css?v={{ app_version }}"/>
 {% endblock %}
 {% block content %}
-                <div class="section_header top_header"><a href="/" class="back_arrow"></a>Quora Messages</div>
-                <div class="text_block">In 2018, I led a project which redesigned Quora's messaging platform. At the time, Quora's existing messaging features, many of which had not been actively worked on in years, had a lot of room for improvement.</div>
-                <div class="text_block">Namely, messaging on Quora was a buggy, non-mobile optimized experience that was high-friction to use.</div>
-                <div class="image_group">
-                    <a class="image_wrapper" href="/images/projects/quora_messages/01.png?v={{ app_version }}">
-                        <img src="/images/projects/quora_messages/01.png?v={{ app_version }}" alt="The main screen for Quora Messages on desktop.">
-                    </a>
-                    <div class="photo_description">The main screen for Quora Messages on desktop.</div>
+                <div class="section_header top_header" itemprop="headline"><a href="/" class="back_arrow"></a>Quora Messages</div>
+                <link itemprop="mainEntityOfPage" href="/project/quora-messages"/>
+                <div itemprop="text">
+                    <div class="text_block">In 2018, I led a project which redesigned Quora's messaging platform. At the time, Quora's existing messaging features, many of which had not been actively worked on in years, had a lot of room for improvement.</div>
+                    <div class="text_block">Namely, messaging on Quora was a buggy, non-mobile optimized experience that was high-friction to use.</div>
+                    <div class="image_group">
+                        <a class="image_wrapper" href="/images/projects/quora_messages/01.png?v={{ app_version }}">
+                            <img src="/images/projects/quora_messages/01.png?v={{ app_version }}" alt="The main screen for Quora Messages on desktop.">
+                        </a>
+                        <div class="photo_description">The main screen for Quora Messages on desktop.</div>
+                    </div>
+                    <div class="text_block list_intro">The goals I set for this project were to:</div>
+                    <ul class="section_list project_list">
+                        <li>Bring the design of Quora Messages into visual alignment with the rest of Quora's desktop and mobile site</li>
+                        <li>Fix mechanical inconsistencies with how messages worked</li>
+                        <li>Improve the experience of reading and writing messages</li>
+                        <li>Integrate Quora Messages into the rest of the site so as to promote increased user engagement</li>
+                        <li>Make the experience of sending messages more frictionless</li>
+                    </ul>
+                    <div class="image_group inline_group">
+                        <a class="image_wrapper mobile_inline" href="/images/projects/quora_messages/03.png?v={{ app_version }}">
+                            <img src="/images/projects/quora_messages/03.png?v={{ app_version }}" alt="An image of the main mobile screen for Quora Messages.">
+                        </a>
+                        <a class="image_wrapper mobile_inline" href="/images/projects/quora_messages/04.png?v={{ app_version }}">
+                            <img src="/images/projects/quora_messages/04.png?v={{ app_version }}" alt="An image of a detailed mobile conversation screen for Quora Messages.">
+                        </a>
+                        <div class="photo_description">The main and detailed conversation screens for Quora Messages on iOS.</div>
+                    </div>
+                    <div class="text_block">Over the course of a month, I designed, built, and launched a redesigned version of Quora Messages that accomplished the vast majority of the goals I set for the project.</div>
+                    <div class="text_block">I was able to bring the design and mechanics of messages into alignment with the rest of Quora, improve the experience of sending and receiving messages, and to do this in a way that boosted overall user engagement with Quora more broadly.</div>
+                    <div class="image_group">
+                        <a class="image_wrapper" href="/images/projects/quora_messages/02.png?v={{ app_version }}">
+                            <img src="/images/projects/quora_messages/02.png?v={{ app_version }}" alt="An image of a detailed desktop conversation screen for Quora Messages.">
+                        </a>
+                        <div class="photo_description">The detailed conversation screen for Quora Messages on desktop.</div>
+                    </div>
+                    <div class="text_block">Give Quora Messages a try for yourself by visiting <a href="https://www.quora.com/messages" class="naked_link" target="_blank" itemprop="relatedLink">quora.com/messages</a>.</div>
                 </div>
-                <div class="text_block list_intro">The goals I set for this project were to:</div>
-                <ul class="section_list project_list">
-                    <li>Bring the design of Quora Messages into visual alignment with the rest of Quora's desktop and mobile site</li>
-                    <li>Fix mechanical inconsistencies with how messages worked</li>
-                    <li>Improve the experience of reading and writing messages</li>
-                    <li>Integrate Quora Messages into the rest of the site so as to promote increased user engagement</li>
-                    <li>Make the experience of sending messages more frictionless</li>
-                </ul>
-                <div class="image_group inline_group">
-                    <a class="image_wrapper mobile_inline" href="/images/projects/quora_messages/03.png?v={{ app_version }}">
-                        <img src="/images/projects/quora_messages/03.png?v={{ app_version }}" alt="An image of the main mobile screen for Quora Messages.">
-                    </a>
-                    <a class="image_wrapper mobile_inline" href="/images/projects/quora_messages/04.png?v={{ app_version }}">
-                        <img src="/images/projects/quora_messages/04.png?v={{ app_version }}" alt="An image of a detailed mobile conversation screen for Quora Messages.">
-                    </a>
-                    <div class="photo_description">The main and detailed conversation screens for Quora Messages on iOS.</div>
-                </div>
-                <div class="text_block">Over the course of a month, I designed, built, and launched a redesigned version of Quora Messages that accomplished the vast majority of the goals I set for the project.</div>
-                <div class="text_block">I was able to bring the design and mechanics of messages into alignment with the rest of Quora, improve the experience of sending and receiving messages, and to do this in a way that boosted overall user engagement with Quora more broadly.</div>
-                <div class="image_group">
-                    <a class="image_wrapper" href="/images/projects/quora_messages/02.png?v={{ app_version }}">
-                        <img src="/images/projects/quora_messages/02.png?v={{ app_version }}" alt="An image of a detailed desktop conversation screen for Quora Messages.">
-                    </a>
-                    <div class="photo_description">The detailed conversation screen for Quora Messages on desktop.</div>
-                </div>
-                <div class="text_block">Give Quora Messages a try for yourself by visiting <a href="https://www.quora.com/messages" class="naked_link" target="_blank">quora.com/messages</a>.</div>
 {% endblock %}
 {% block footer %}
-                    <li class="back_li"><a class="back_link" href="/">Back Home</a></li>
-                    <li class="forward_li"><a class="forward_link" href="/project/quora-ads-manager">Next Project</a></li>
+                    <li class="back_li"><a class="back_link" href="/" itemprop="relatedLink">Back Home</a></li>
+                    <li class="forward_li"><a class="forward_link" href="/project/quora-ads-manager" itemprop="relatedLink">Next Project</a></li>
 {% endblock %}
