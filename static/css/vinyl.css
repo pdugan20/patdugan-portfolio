@@ -51,6 +51,9 @@
     padding: 0 30px 20px 30px;
     margin-bottom: 0;
   }
+  .record_cover {
+    position: relative;
+  }
   .record_wrapper {
     width: 32.5%;
     height: initial;
