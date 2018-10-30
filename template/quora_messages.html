@@ -8,9 +8,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?v={{ app_version }}"/>
         <link rel="stylesheet" type="text/css" media="screen" href="/css/project.css?v={{ app_version }}"/>
 {% endblock %}
-{% block content %}
-                <div class="section_header top_header" itemprop="headline"><a href="/" class="back_arrow"></a>Quora Messages</div>
-                <link itemprop="mainEntityOfPage" href="/project/quora-messages"/>
+{% block content %}{{ super() }}
                 <div itemprop="text">
                     <div class="text_block">In 2018, I led a project which redesigned Quora's messaging platform. At the time, Quora's existing messaging features, many of which had not been actively worked on in years, had a lot of room for improvement.</div>
                     <div class="text_block">Namely, messaging on Quora was a buggy, non-mobile optimized experience that was high-friction to use.</div>

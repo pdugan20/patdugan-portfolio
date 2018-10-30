@@ -8,10 +8,12 @@
         <link rel="stylesheet" type="text/css" media="screen" href="/css/vinyl.css?v={{ app_version }}"/>
 {% endblock %}
 {% block content %}
-                <div class="section_header top_header"><a href="/" class="back_arrow"></a>Vinyl Collection</div>
-                <div class="text_block">I really enjoy listening to records and currently have <a href="https://www.discogs.com/user/patdugan/collection" target="_blank">{{record_collection|length}}</a> in my collection. I listen on a <a href="https://www.radiomuseum.org/r/sony_str_1800str180.html" target="_blank">Sony STR-1800</a> receiver with a <a href="https://www.vinylengine.com/library/sony/ps-3300.shtml" target="_blank">Sony PS-3300</a> turntable.</div>
-                <div class="text_block">This past week I've been listening to{% for artist in artist_list %} <a href="{{ artist.url }}" target="_blank">{{ artist.name }}{% if not loop.last %}</a>,{% endif %}{% if loop.index == 4 %} and{% endif %}{% endfor %}</a>.</div>
-                <div class="text_block">Check out my <a href="https://last.fm/user/pdugan20" target="_blank">last.fm profile</a> to learn more about the types of music I like.</div>
+                <div class="section_header top_header" itemprop="headline"><a href="/" class="back_arrow"></a>Vinyl Collection</div>
+                <div itemprop="text">
+                    <div class="text_block">I really enjoy listening to records and currently have <a href="https://www.discogs.com/user/patdugan/collection" target="_blank">{{record_collection|length}}</a> in my collection. I listen on a <a href="https://www.radiomuseum.org/r/sony_str_1800str180.html" target="_blank">Sony STR-1800</a> receiver with a <a href="https://www.vinylengine.com/library/sony/ps-3300.shtml" target="_blank">Sony PS-3300</a> turntable.</div>
+                    <div class="text_block">This past week I've been listening to{% for artist in artist_list %} <a href="{{ artist.url }}" target="_blank">{{ artist.name }}{% if not loop.last %}</a>,{% endif %}{% if loop.index == 4 %} and{% endif %}{% endfor %}</a>.</div>
+                    <div class="text_block">Check out my <a href="https://last.fm/user/pdugan20" target="_blank">last.fm profile</a> to learn more about the types of music I like.</div>
+                </div>
                 <div class="record_collection_wrapper">
 {% for record in record_collection %}
                 <a class="record_wrapper" href="{{ record.url }}" target="_blank" itemscope itemtype="http://schema.org/MusicAlbum">

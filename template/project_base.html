@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block page_css %}
 <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/css/fluidbox.min.css"/>{% endblock %}
+{% block content %}
+                <div class="section_header top_header" itemprop="headline"><a href="/" class="back_arrow"></a>{{ self.title() }}</div>
+                <link itemprop="mainEntityOfPage" href="{{ self.page_url() }}"/>{% endblock %}
 {% block js %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
