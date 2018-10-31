@@ -36,7 +36,7 @@
         <!-- opengraph metadata -->
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{% block page_url %}https://www.patdugan.me{% endblock %}"/>
-        <meta property="og:title" content="{% block share_title %}Patrick Dugan{% endblock %}"/>
+        <meta property="og:title" content="{{ self.title() }}"/>
         <meta property="og:description" content="{% block page_description %}Patrick Dugan is a designer at Quora who previously worked at Google and Nextdoor. He was also a member of the Designer Fund's professional development program, Bridge.{% endblock %}"/>
         <meta property="og:image" content="{% block card_image %}https://www.patdugan.me/images/me.jpg{% endblock %}"/>
         <!-- stylesheets -->
@@ -45,7 +45,7 @@
 {% block page_css %}{% endblock %}
 {% endblock %}
     </head>
-    <body itemscope itemtype="https://schema.org/WebPage">
+    <body itemscope itemtype="https://schema.org/{% block schema_type %}WebPage{% endblock %}">
         <div class="body_outer_wrapper">
             <div class="content">
 {% block content %}{% endblock %}

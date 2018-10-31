@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block title %}{{ super() }}'s Vinyl Collection{% endblock %}
-{% block share_title %}{{ super() }}'s Vinyl Collection{% endblock %}
 {% block page_url %}{{ super() }}/project/vinyl{% endblock %}
 {% block page_description %}Patrick Dugan has been collecting and listening to vinyl since 2012.{% endblock %}
+{% block schema_type %}CollectionPage{% endblock %}
 {% block page_css %}
         <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?v={{ app_version }}"/>
         <link rel="stylesheet" type="text/css" media="screen" href="/css/vinyl.css?v={{ app_version }}"/>
@@ -21,7 +21,7 @@
                     <link href="{{ record.url }}" itemprop="url"/>
                     <div class="record_metadata">
                         <div class="record_name" itemprop="name">{{ record.title }}</div>
-                        <div class="artist_name" itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup"><span itemprop="name">{{ record.artist }}</span>, {{ record.year }}</div>
+                        <div class="artist_name"><span itemprop="byArtist" itemscope itemtype="http://schema.org/MusicGroup"><span itemprop="name">{{ record.artist }}</span></span>, <span itemprop="copyrightYear">{{ record.year }}</span></div>
                     </div>
                 </a>
 {% endfor %}
