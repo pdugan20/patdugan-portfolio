@@ -11,6 +11,11 @@ handlers:
 - url: /js
   static_dir: static/js
 
+- url: /runs
+  static_dir: static/runs
+  http_headers:
+    Access-Control-Allow-Origin: "*"
+
 - url: /css
   static_dir: static/css
   http_headers:

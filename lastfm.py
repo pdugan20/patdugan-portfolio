@@ -11,7 +11,7 @@ def weekly_artists():
     lastFmUrl = LASTFM_API
     lastFmUrl += '?method=' + API_METHOD
     lastFmUrl += '&user=' + 'pdugan20'
-    lastFmUrl += '&from=' + str(time.time() - 1209600) # 2 weeks
+    lastFmUrl += '&from=' + str(time.time() - 604800) # 1 week
     lastFmUrl += '&to=' + str(time.time())
     lastFmUrl += '&api_key=' + API_KEY
     lastFmUrl += '&format=' + 'json'
