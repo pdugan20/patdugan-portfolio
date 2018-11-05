@@ -1,13 +1,11 @@
+.image_wrapper {
+  display: inline-block;
+}
 .image_wrapper.desktop_inline {
   width: 48.9%;
-  display: inline-block;
 }
 .image_wrapper.mobile_inline {
   width: 47.9%;
-  display: inline-block;
-}
-.image_group.inline_group a:first-child {
-  margin-right: 20px;
 }
 .photo_description {
   color: #9E9E9E;
@@ -17,11 +15,17 @@
 .photo_description.center {
   text-align: center;
 }
+.photo_description.map_description {
+  margin-top: 5px;
+}
 .image_group {
   margin: 30px 0 25px 0;
 }
 .image_group img {
   margin-bottom: 0;
+}
+.image_group.inline_group a:first-child {
+  margin-right: 20px;
 }
 .fluidbox__overlay {
   background-color: rgba(255, 255, 255, 0.9);

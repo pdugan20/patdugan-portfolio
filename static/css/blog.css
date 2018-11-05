@@ -32,9 +32,6 @@ ol li {
 .meta_image {
   display: none;
 }
-.photo_description.map_description {
-  margin-top: 5px;
-}
 .naked_link {
   font-weight: 400;
   text-decoration: underline;

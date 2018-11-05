@@ -1,5 +1,7 @@
 @import "less/variables";
 
+@map_height: 300px;
+
 ol {
     margin-left: @space_medium * 2;
     margin-bottom: @space_medium;
@@ -33,17 +35,13 @@ ol {
 
 .map {
     width: 100%;
-    height: 300px;
+    height: @map_height;
     border: @border;
-    border-radius: 3px
+    border-radius: @border_radius;
 }
 
 .meta_image {
     display: none;
-}
-
-.photo_description.map_description {
-    margin-top: @space_tiny;
 }
 
 .naked_link {
@@ -94,10 +92,10 @@ blockquote {
 .blog_img {
     display: block;
     margin: 0 auto;
-}
 
-.blog_img.half_width {
-    width: 40%;
+    &.half_width {
+        width: 40%;
+    }
 }
 
 @media only screen and (max-width: @iphone_width) {
@@ -121,15 +119,17 @@ blockquote {
         width: 100%;
     }
 
-    .image_group.map_group {
-        padding: 0;
-    }
+    .image_group {
+        &.map_group {
+            padding: 0;
+        }
 
-    .image_group.full_width_image {
-        padding: 0;
+        &.full_width_image {
+            padding: 0;
 
-        img {
-            border-radius: 3px;
+            img {
+                border-radius: @border_radius;
+            }
         }
     }
 }
