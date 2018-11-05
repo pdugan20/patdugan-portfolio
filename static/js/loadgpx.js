@@ -1,9 +1,10 @@
-function GPXParser(xmlDoc, map) {
+function GPXParser(xmlDoc, map, map_info) {
     this.xmlDoc = xmlDoc;
     this.map = map;
     this.trackcolour = "#4B2E83";
     this.trackwidth = 5;
     this.mintrackpointdelta = 0.0001
+    this.map_info = ''
 }
 
 // Set the colour of the track line segements.
@@ -14,6 +15,11 @@ GPXParser.prototype.setTrackColour = function(colour) {
 // Set the width of the track line segements
 GPXParser.prototype.setTrackWidth = function(width) {
     this.trackwidth = width;
+}
+
+// Set the infowindow of the track line segements
+GPXParser.prototype.setTrackInfo = function(map_info) {
+    this.map_info = map_info;
 }
 
 // Set the minimum distance between trackpoints.
@@ -84,7 +90,7 @@ GPXParser.prototype.createMarker = function(point) {
 }
 
 GPXParser.prototype.addTrackSegmentToMap = function(trackSegment, colour,
-        width) {
+        width, map_info) {
     var trackpoints = trackSegment.getElementsByTagName("trkpt");
     if(trackpoints.length == 0) {
         return;
@@ -121,13 +127,22 @@ GPXParser.prototype.addTrackSegmentToMap = function(trackSegment, colour,
         strokeWeight: width,
         map: this.map
     });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    google.maps.event.addListener(polyline, 'click', function(event) {
+        infowindow.setContent(map_info);
+        infowindow.setPosition(event.latLng);
+        infowindow.open(this.map);
+    });
+
 }
 
-GPXParser.prototype.addTrackToMap = function(track, colour, width) {
+GPXParser.prototype.addTrackToMap = function(track, colour, width, map_info) {
     var segments = track.getElementsByTagName("trkseg");
     for(var i = 0; i < segments.length; i++) {
         var segmentlatlngbounds = this.addTrackSegmentToMap(segments[i], colour,
-                width);
+                width, map_info);
     }
 }
 
@@ -239,7 +254,7 @@ GPXParser.prototype.centerAndZoomToLatLngBounds = function(latlngboundsarray) {
 GPXParser.prototype.addTrackpointsToMap = function() {
     var tracks = this.xmlDoc.documentElement.getElementsByTagName("trk");
     for(var i = 0; i < tracks.length; i++) {
-        this.addTrackToMap(tracks[i], this.trackcolour, this.trackwidth);
+        this.addTrackToMap(tracks[i], this.trackcolour, this.trackwidth, this.map_info);
     }
 }
 
