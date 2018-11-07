@@ -19,14 +19,6 @@
   left: 8px;
   right: 8px;
 }
-.artist_name {
-  position: absolute;
-  bottom: 8px;
-  left: 8px;
-  right: 8px;
-  font-weight: 400;
-  font-size: 13px;
-}
 .record_wrapper {
   position: relative;
   display: inline-block;
@@ -45,6 +37,14 @@
 .record_wrapper:hover .record_cover {
   transition: all 0.5s ease;
   opacity: 0.05;
+}
+.artist_name {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  font-weight: 400;
+  font-size: 13px;
 }
 @media only screen and (max-width: 667px) {
   .record_collection_wrapper {

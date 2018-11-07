@@ -2,30 +2,58 @@
 
 @record_padding:     8px;
 @record_dimension: 141px;
+@record_animation:  0.5s;
 
-.record_collection_wrapper {
-    margin-bottom: -@space_tiny;
-}
+.record_ {
+    &collection_wrapper {
+        margin-bottom: -@space_tiny;
+    }
 
-.record_cover {
-    transition: all 0.5s ease;
-    box-sizing: border-box;
-    position: absolute;
-    width: 100%;
-}
+    &cover {
+        transition: all @record_animation ease;
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
+    }
 
-.record_metadata {
-    color: @color_white;
-    opacity: 0;
-    line-height: @font_tiny_lh;
-}
+    &metadata {
+        color: @color_white;
+        opacity: 0;
+        line-height: @font_tiny_lh;
+    }
 
-.record_name {
-    position: absolute;
-    line-height: @font_tiny_lh;
-    top: @record_padding;
-    left: @record_padding;
-    right: @record_padding;
+    &name {
+        position: absolute;
+        line-height: @font_tiny_lh;
+        top: @record_padding;
+        left: @record_padding;
+        right: @record_padding;
+    }
+
+    &wrapper {
+        position: relative;
+        display: inline-block;
+        width: @record_dimension;
+        background-color: @color_purple;
+        height: @record_dimension;
+        box-sizing: border-box;
+        border: 1px solid @color_ultra_light_gray;
+
+        &:hover {
+            box-sizing: border-box;
+
+            .record_ {
+                &metadata {
+                    opacity: 1;
+                }
+
+                &cover {
+                    transition: all @record_animation ease;
+                    opacity: 0.05;
+                }
+            }
+        }
+    }
 }
 
 .artist_name {
@@ -37,46 +65,25 @@
     font-size: @font_size_tiny;
 }
 
-.record_wrapper {
-    position: relative;
-    display: inline-block;
-    width: @record_dimension;
-    background-color: @color_purple;
-    height: @record_dimension;
-    box-sizing: border-box;
-    border: 1px solid @color_ultra_light_gray;;
-}
-
-.record_wrapper:hover {
-    box-sizing: border-box;
-
-    .record_metadata {
-        opacity: 1;
-    }
-
-    .record_cover {
-        transition: all 0.5s ease;
-        opacity: 0.05;
-    }
-}
-
 @media only screen and (max-width: @iphone_width) {
-    .record_collection_wrapper {
-        padding: 0 @space_huge @space_medium @space_huge;
-        margin-bottom: 0;
-    }
+    .record_ {
+        &collection_wrapper {
+            padding: 0 @space_huge @space_medium @space_huge;
+            margin-bottom: 0;
+        }
 
-    .record_cover {
-        position: relative;
-    }
+        &cover {
+            position: relative;
+        }
 
-    .record_wrapper {
-        width: 32.5%;
-        height: initial;
-        display: inline-grid;
-    }
+        &wrapper {
+            width: 32.5%;
+            height: initial;
+            display: inline-grid;
+        }
 
-    .record_name {
-        font-size: @font_size_regular;
+        &name {
+            font-size: @font_size_regular;
+        }
     }
 }
