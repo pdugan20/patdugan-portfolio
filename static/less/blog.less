@@ -55,9 +55,24 @@ ol {
     text-decoration: underline;
 }
 
-.section_list {
+.section_list.blog_list {
+    margin-left: @space_huge;
+
     li {
         margin-bottom: @space_tiny;
+        padding-left: @space_smaller;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.body_outer_wrapper {
+    .gist {
+        .gist-file {
+            margin: @space_tiny 0;
+        }
     }
 }
 
@@ -128,8 +143,8 @@ img {
         line-height: @font_tiny_lh;
     }
 
-    .section_list {
-        margin-left: @space_tiny;
+    .section_list.blog_list {
+        margin-left: @space_smaller;
         padding: 0 @space_small;
     }
 
