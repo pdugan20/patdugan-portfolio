@@ -143,6 +143,9 @@ li:hover .text_block.list_text {
   .section_list {
     padding: 0 30px;
   }
+  .section_list.decimal_list {
+    padding: 0 35px;
+  }
   .section_list .text_block {
     padding-right: 0;
   }

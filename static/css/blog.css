@@ -118,6 +118,13 @@ img {
   .blog_img.half_width {
     width: 100%;
   }
+  .body_outer_wrapper .gist .blob-num {
+    line-height: 1.6;
+  }
+  .body_outer_wrapper .gist .blob-code-inner {
+    line-height: 1.6;
+    font-size: 8px;
+  }
   .image_group.map_group {
     padding: 0;
   }
