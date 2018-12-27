@@ -26,7 +26,8 @@
   background-color: #4B2E83;
   height: 141px;
   box-sizing: border-box;
-  border: 1px solid #EFEFEF;
+  border: 1px solid #D7D7D7;
+  border-color: #EFEFEF;
 }
 .record_wrapper:hover {
   box-sizing: border-box;

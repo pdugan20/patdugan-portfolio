@@ -3,13 +3,15 @@
 @map_height: 300px;
 
 ol {
-    margin-left: @space_medium * 2;
-    margin-bottom: @space_medium;
-    margin-top: @space_medium;
+    margin: @space_medium 0 @space_medium (@space_medium * 2);
 
     li {
         list-style-type: disc;
         padding-bottom: @space_tiny;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
     }
 }
 
@@ -20,8 +22,7 @@ ol {
 .timestamp {
     color: @color_dark_gray;
     font-size: @font_size_regular;
-    margin-bottom: @space_small + 2px;
-    margin-top: @space_smaller;
+    margin: @space_smaller 0 (@space_small + 2px) 0;
     
     a {
         font-weight: @font_weight_regular;
@@ -55,34 +56,11 @@ ol {
     text-decoration: underline;
 }
 
-.section_list.blog_list {
-    margin-left: @space_huge;
-
-    li {
-        margin-bottom: @space_tiny;
-        padding-left: @space_smaller;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
-.body_outer_wrapper {
-    .gist {
-        .gist-file {
-            margin: @space_tiny 0;
-        }
-    }
-}
-
 .section_header {
     border-top: @border;
     border-bottom: none;
-    margin-top: 0;
-    padding-bottom: 0;
-    margin-bottom: @space_tiny;
-    padding-top: @space_small;
+    margin: 0 0 @space_tiny 0;
+    padding: @space_small 0 0 0;
 }
 
 .small_header {
@@ -97,23 +75,6 @@ ol {
 
 .footer {
     margin-top: @space_medium;
-}
-
-.twitter-tweet {
-    display: block;
-    margin: 0 auto;
-}
-
-i {
-    font-style: italic;
-}
-
-blockquote {
-    font-style: italic;
-    border-left: @border;
-    border-width: 2px;
-    display: inline-block;
-    padding-left: @space_small;
 }
 
 .blog_img {
@@ -137,15 +98,8 @@ img {
 
 @media only screen and (max-width: @iphone_width) {
     .section_header {
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: @space_smaller;
+        margin: 0 0 @space_smaller 0;
         line-height: @font_tiny_lh;
-    }
-
-    .section_list.blog_list {
-        margin-left: @space_smaller;
-        padding: 0 @space_small;
     }
 
     .body_outer_wrapper {
@@ -158,19 +112,6 @@ img {
 
     .blog_img.half_width {
         width: 100%;
-    }
-
-    .body_outer_wrapper {
-        .gist {
-            .blob-num {
-                line-height: @font_large_lh;
-            }
-
-            .blob-code-inner {
-                line-height: @font_large_lh;
-                font-size: 8px;
-            }
-        }
     }
 
     .image_group {

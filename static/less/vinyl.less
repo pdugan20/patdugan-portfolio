@@ -1,8 +1,10 @@
 @import "less/variables";
 
-@record_padding:     8px;
-@record_dimension: 141px;
-@record_animation:  0.5s;
+@record_padding:             8px;
+@record_width_desktop:     141px;
+@record_width_mobile:      32.5%;
+@record_animation:          0.5s;
+@record_opacity:            0.05;
 
 .record_ {
     &collection_wrapper {
@@ -33,11 +35,12 @@
     &wrapper {
         position: relative;
         display: inline-block;
-        width: @record_dimension;
+        width: @record_width_desktop;
         background-color: @color_purple;
-        height: @record_dimension;
+        height: @record_width_desktop;
         box-sizing: border-box;
-        border: 1px solid @color_ultra_light_gray;
+        border: @border;
+        border-color: @color_ultra_light_gray;
 
         &:hover {
             box-sizing: border-box;
@@ -49,7 +52,7 @@
 
                 &cover {
                     transition: all @record_animation ease;
-                    opacity: 0.05;
+                    opacity: @record_opacity;
                 }
             }
         }
@@ -77,7 +80,7 @@
         }
 
         &wrapper {
-            width: 32.5%;
+            width: @record_width_mobile;
             height: initial;
             display: inline-grid;
         }

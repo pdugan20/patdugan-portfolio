@@ -12,10 +12,10 @@ a {
     color: @color_black;
     font-weight: @font_weight_bold;
     -webkit-tap-highlight-color: rgba(250, 250, 250, 0.6);
-}
 
-a:hover {
-    color: @color_purple;
+    &:hover {
+        color: @color_purple;
+    }
 }
 
 .body_outer_wrapper {
@@ -60,33 +60,41 @@ a:hover {
     }
 }
 
-.back_link:before {
-    content: @back_arrow;
-    color: @color_dark_gray;
-    padding-right: @space_tiny;
-    font-size: @font_size_medium;
-    line-height: @font_tiny_lh;
+.back_link,
+.forward_link {
+    &:before {
+        color: @color_dark_gray;
+        line-height: @font_tiny_lh;
+        font-size: @font_size_medium;
+    }
 }
 
-.forward_link:after {
-    content: @forward_arrow;
-    color: @color_dark_gray;
-    padding-left: @space_tiny;
-    font-size: @font_size_medium;
-    line-height: @font_tiny_lh;
+.back_link {
+    &:before {
+        content: @back_arrow;
+        padding-right: @space_tiny;
+    }
 }
 
-li.forward_li {
-    float: right;
-    margin-right: 0;
+.forward_link {
+    &:after {
+        content: @forward_arrow;
+        padding-left: @space_tiny;
+    }
+}
+
+li {
+    &.forward_li {
+        float: right;
+        margin-right: 0;
+    }
 }
 
 .section_header {
     border-bottom: @border;
     font-size: @font_size_large;
     font-weight: @font_weight_bold;
-    margin-bottom: @space_small;
-    margin-top: @space_huge;
+    margin: @space_huge 0 @space_small 0;
     padding-bottom: @space_tiny - 1px;
 
     &.top_header {
@@ -94,11 +102,13 @@ li.forward_li {
     }
 }
 
-.back_arrow:before {
-    content: @back_arrow;
-    padding-right: @space_tiny;
-    font-size: @font_size_large + 2px;
-    line-height: @font_tiny_lh;
+.back_arrow {
+    &:before {
+        content: @back_arrow;
+        padding-right: @space_tiny;
+        font-size: @font_size_large + 2px;
+        line-height: @font_tiny_lh;
+    }
 }
 
 .list_link {
@@ -136,26 +146,88 @@ li.forward_li {
         list-style-position: outside;
         padding-left: @space_tiny;
     }
+
+    &.blog_list {
+        margin-left: @space_huge;
+
+        li {
+            margin-bottom: @space_tiny;
+            padding-left: @space_smaller;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.project_list {
+        margin: 0 0 @space_medium @space_huge;
+
+        li {
+            list-style-type: disc;
+            padding-bottom: @space_tiny;
+        }
+    }
 }
 
 .text_block_link {
     font-weight: initial;
 }
 
-li:hover {
-    .list_item_title {
-        color: @color_purple;
-    }
+li {
+    &:hover {
+        .list_item_title {
+            color: @color_purple;
+        }
 
-    .text_block.list_text {
-        color: @color_black;
+        .text_block {
+            &.list_text {
+                color: @color_black;
+            }
+        }
     }
+}
+
+.body_outer_wrapper {
+    .gist {
+        .gist-file {
+            margin: @space_tiny 0;
+        }
+    }
+}
+
+.twitter-tweet {
+    display: block;
+    margin: 0 auto;
+}
+
+i {
+    font-style: italic;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: @border;
+    border-width: 2px;
+    display: inline-block;
+    padding-left: @space_small;
 }
 
 @media only screen and (max-width: @iphone_width) {
     .body_outer_wrapper {
         max-width: initial;
         margin-top: 0;
+
+        .gist {
+            .blob-num {
+                line-height: @font_large_lh;
+            }
+
+            .blob-code-inner {
+                line-height: @font_large_lh;
+                font-size: @space_smaller - 2px;
+            }
+        }
     }
 
     .image_wrapper img {
@@ -186,13 +258,20 @@ li:hover {
             padding: 0 (@space_huge + @space_tiny);
         }
 
+        &.blog_list {
+            margin-left: @space_smaller;
+            padding: 0 @space_small;
+        }
+
         .text_block {
             padding-right: 0;
         }
     }
 
-    .text_block.list_text {
-        text-indent: 0;
-        padding-left: 0;
+    .text_block {
+        &.list_text {
+            text-indent: 0;
+            padding-left: 0;
+        }
     }
 }

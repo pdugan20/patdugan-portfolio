@@ -47,19 +47,19 @@ a:hover {
 .footer a:hover {
   color: #787878;
 }
+.back_link:before,
+.forward_link:before {
+  color: #9E9E9E;
+  line-height: 1.2;
+  font-size: 18px;
+}
 .back_link:before {
   content: '\2039';
-  color: #9E9E9E;
   padding-right: 5px;
-  font-size: 18px;
-  line-height: 1.2;
 }
 .forward_link:after {
   content: '\203A';
-  color: #9E9E9E;
   padding-left: 5px;
-  font-size: 18px;
-  line-height: 1.2;
 }
 li.forward_li {
   float: right;
@@ -69,8 +69,7 @@ li.forward_li {
   border-bottom: 1px solid #D7D7D7;
   font-size: 21px;
   font-weight: 600;
-  margin-bottom: 15px;
-  margin-top: 30px;
+  margin: 30px 0 15px 0;
   padding-bottom: 4px;
 }
 .section_header.top_header {
@@ -110,6 +109,23 @@ li.forward_li {
   list-style-position: outside;
   padding-left: 5px;
 }
+.section_list.blog_list {
+  margin-left: 30px;
+}
+.section_list.blog_list li {
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+.section_list.blog_list li:last-child {
+  margin-bottom: 0;
+}
+.section_list.project_list {
+  margin: 0 0 20px 30px;
+}
+.section_list.project_list li {
+  list-style-type: disc;
+  padding-bottom: 5px;
+}
 .text_block_link {
   font-weight: initial;
 }
@@ -119,10 +135,34 @@ li:hover .list_item_title {
 li:hover .text_block.list_text {
   color: #333333;
 }
+.body_outer_wrapper .gist .gist-file {
+  margin: 5px 0;
+}
+.twitter-tweet {
+  display: block;
+  margin: 0 auto;
+}
+i {
+  font-style: italic;
+}
+blockquote {
+  font-style: italic;
+  border-left: 1px solid #D7D7D7;
+  border-width: 2px;
+  display: inline-block;
+  padding-left: 15px;
+}
 @media only screen and (max-width: 667px) {
   .body_outer_wrapper {
     max-width: initial;
     margin-top: 0;
+  }
+  .body_outer_wrapper .gist .blob-num {
+    line-height: 1.6;
+  }
+  .body_outer_wrapper .gist .blob-code-inner {
+    line-height: 1.6;
+    font-size: 8px;
   }
   .image_wrapper img {
     margin-bottom: 20px;
@@ -145,6 +185,10 @@ li:hover .text_block.list_text {
   }
   .section_list.decimal_list {
     padding: 0 35px;
+  }
+  .section_list.blog_list {
+    margin-left: 10px;
+    padding: 0 15px;
   }
   .section_list .text_block {
     padding-right: 0;

@@ -1,14 +1,18 @@
 @import "less/variables";
 
+@desktop_photo_width:             48.9%;
+@mobile_photo_width:              47.9%;
+@mobile_responsive_photo_width:     46%;
+
 .image_wrapper {
     display: inline-block;
 
     &.desktop_inline {
-        width: 48.9%;
+        width: @desktop_photo_width;
     }
 
     &.mobile_inline {
-        width: 47.9%;
+        width: @mobile_photo_width;
     }
 }
 
@@ -50,17 +54,9 @@
     }
 }
 
-.text_block.list_intro {
-    margin-bottom: @space_smaller;
-}
-
-.section_list.project_list {
-    margin-left: @space_huge;
-    margin-bottom: @space_medium;
-
-    li {
-        list-style-type: disc;
-        padding-bottom: @space_tiny;
+.text_block {
+    &.list_intro {
+        margin-bottom: @space_smaller;
     }
 }
 
@@ -74,7 +70,9 @@
         padding: 0 @space_huge;
     }
 
-    .image_wrapper.mobile_inline {
-        width: 46%;
+    .image_wrapper {
+        &.mobile_inline {
+            width: @mobile_responsive_photo_width;
+        }
     }
 }

@@ -36,14 +36,6 @@
 .text_block.list_intro {
   margin-bottom: 10px;
 }
-.section_list.project_list {
-  margin-left: 30px;
-  margin-bottom: 20px;
-}
-.section_list.project_list li {
-  list-style-type: disc;
-  padding-bottom: 5px;
-}
 .naked_link {
   font-weight: 400;
   text-decoration: underline;
