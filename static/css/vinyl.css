@@ -28,6 +28,7 @@
   box-sizing: border-box;
   border: 1px solid #D7D7D7;
   border-color: #EFEFEF;
+  margin-bottom: -1px;
 }
 .record_wrapper:hover {
   box-sizing: border-box;
