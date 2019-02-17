@@ -1,10 +1,13 @@
 import json
 from google.appengine.api import urlfetch
 
-DISCOGS_API = 'https://api.discogs.com/users/patdugan/collection/folders/0/releases'
+DISCOGS_API = (
+    'https://api.discogs.com/users/patdugan/collection/folders/0/releases'
+)
 DISCOGS_ALBUM_URL = 'http://www.discogs.com/release/'
 API_KEY = 'qzhFhUTUMydigBFJCdGU'
 API_SECRET = 'jVlHbmkHintWgTXXEIuENaNLwzoYoJwE'
+
 
 def record_collection():
     discogsUrl = DISCOGS_API
@@ -22,7 +25,9 @@ def record_collection():
         current_record_info = {
             'id': lp['id'],
             'title': lp['basic_information']['title'],
-            'artist': lp['basic_information']['artists'][0]['name'].strip(' (2)'),
+            'artist': (
+                lp['basic_information']['artists'][0]['name'].strip(' (2)')
+            ),
             'year': lp['basic_information']['year'],
             'url': DISCOGS_ALBUM_URL + str(lp['id']),
         }
