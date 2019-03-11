@@ -27,7 +27,7 @@ a {
 .image_wrapper img {
     max-width: 100%;
     margin-bottom: @space_small;
-    border-radius: @space_tiny;
+    border-radius: @space_micro;
 }
 
 .text_block {
@@ -40,13 +40,13 @@ a {
 }
 
 .footer {
-    padding-top: @space_tiny;
+    padding-top: @space_micro;
     border-top: @border;
     margin-top: @space_large;
 
     li {
         display: inline-block;
-        margin-right: @space_tiny;
+        margin-right: @space_micro;
     }
 
     a {
@@ -72,14 +72,14 @@ a {
 .back_link {
     &:before {
         content: @back_arrow;
-        padding-right: @space_tiny;
+        padding-right: @space_micro;
     }
 }
 
 .forward_link {
     &:after {
         content: @forward_arrow;
-        padding-left: @space_tiny;
+        padding-left: @space_micro;
     }
 }
 
@@ -95,7 +95,7 @@ li {
     font-size: @font_size_large;
     font-weight: @font_weight_bold;
     margin: @space_huge 0 @space_small 0;
-    padding-bottom: @space_tiny - 1px;
+    padding-bottom: @space_micro - 1px;
 
     &.top_header {
         margin-top: 0;
@@ -105,7 +105,7 @@ li {
 .back_arrow {
     &:before {
         content: @back_arrow;
-        padding-right: @space_tiny;
+        padding-right: @space_micro;
         font-size: @font_size_large + 2px;
         line-height: @font_tiny_lh;
     }
@@ -129,7 +129,7 @@ li {
         &:before {
             content: @middot;
             color: @color_dark_gray;
-            padding: 0 @space_tiny 0 (@space_tiny - 1px);
+            padding: 0 @space_micro 0 (@space_micro - 1px);
         }
 
         &:hover {
@@ -144,15 +144,15 @@ li {
     li {
         list-style-type: decimal;
         list-style-position: outside;
-        padding-left: @space_tiny;
+        padding-left: @space_micro;
     }
 
     &.blog_list {
         margin-left: @space_huge;
 
         li {
-            margin-bottom: @space_tiny;
-            padding-left: @space_smaller;
+            margin-bottom: @space_micro;
+            padding-left: @space_tiny;
 
             &:last-child {
                 margin-bottom: 0;
@@ -165,7 +165,7 @@ li {
 
         li {
             list-style-type: disc;
-            padding-bottom: @space_tiny;
+            padding-bottom: @space_micro;
         }
     }
 }
@@ -191,7 +191,7 @@ li {
 .body_outer_wrapper {
     .gist {
         .gist-file {
-            margin: @space_tiny 0;
+            margin: @space_micro 0;
         }
     }
 }
@@ -225,7 +225,7 @@ blockquote {
 
             .blob-code-inner {
                 line-height: @font_large_lh;
-                font-size: @space_smaller - 2px;
+                font-size: @space_tiny - 2px;
             }
         }
     }
@@ -255,11 +255,11 @@ blockquote {
         padding: 0 @space_huge;
 
         &.decimal_list {
-            padding: 0 (@space_huge + @space_tiny);
+            padding: 0 (@space_huge + @space_micro);
         }
 
         &.blog_list {
-            margin-left: @space_smaller;
+            margin-left: @space_tiny;
             padding: 0 @space_small;
         }
 

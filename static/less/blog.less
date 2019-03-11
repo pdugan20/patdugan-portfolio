@@ -7,7 +7,7 @@ ol {
 
     li {
         list-style-type: disc;
-        padding-bottom: @space_tiny;
+        padding-bottom: @space_micro;
 
         &:last-child {
             padding-bottom: 0;
@@ -22,7 +22,7 @@ ol {
 .timestamp {
     color: @color_dark_gray;
     font-size: @font_size_regular;
-    margin: @space_smaller 0 (@space_small + 2px) 0;
+    margin: @space_tiny 0 (@space_small + 2px) 0;
 
     a {
         font-weight: @font_weight_regular;
@@ -59,12 +59,12 @@ ol {
 .section_header {
     border-top: @border;
     border-bottom: none;
-    margin: 0 0 @space_tiny 0;
+    margin: 0 0 @space_micro 0;
     padding: @space_small 0 0 0;
 }
 
 .small_header {
-    margin-bottom: @space_tiny;
+    margin-bottom: @space_micro;
 
     a {
         color: @color_dark_gray;
@@ -98,7 +98,7 @@ img {
 
 @media only screen and (max-width: @iphone_width) {
     .section_header {
-        margin: 0 0 @space_smaller 0;
+        margin: 0 0 @space_tiny 0;
         line-height: @font_tiny_lh;
     }
 
