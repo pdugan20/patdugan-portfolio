@@ -4,8 +4,6 @@ import webapp2
 import lastfm
 import discogs
 
-from google.appengine.ext.webapp.util import run_wsgi_app
-
 CURRENT_APP_VERSION = os.environ['CURRENT_VERSION_ID'].split('.', 1)[1]
 
 jinja_environment = jinja2.Environment(
@@ -52,11 +50,3 @@ application = webapp2.WSGIApplication([
     ('/project/quora-ads-manager', QuoraAdsManagerPage),
     ('/', HomePage)
 ])
-
-
-def main():
-    run_wsgi_app(application)
-
-
-if __name__ == '__main__':
-    main()
