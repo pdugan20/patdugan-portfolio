@@ -36,6 +36,7 @@ handlers:
 
 skip_files:
 - static/css/variables.css
+- static/less-watch-compiler.config.js
 
 libraries:
 - name: jinja2
