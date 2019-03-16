@@ -44,9 +44,17 @@ class VinylPage(webapp2.RequestHandler):
         self.response.out.write(path.render(template_values))
 
 
+class ErrorPage(webapp2.RequestHandler):
+    def get(self):
+        self.error(404)
+        path = jinja_environment.get_template('error.html')
+        self.response.out.write(path.render(template_values))
+
+
 application = webapp2.WSGIApplication([
     ('/vinyl', VinylPage),
     ('/project/quora-messages', QuoraMessagesPage),
     ('/project/quora-ads-manager', QuoraAdsManagerPage),
-    ('/', HomePage)
+    ('/', HomePage),
+    ('/.*', ErrorPage),
 ])

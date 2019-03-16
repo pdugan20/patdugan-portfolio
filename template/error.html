@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Sorry this page doesn't seem to exist{% endblock %}
+{% block page_css %}
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?v={{ app_version }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/error.css?v={{ app_version }}"/>
+{% endblock %}
+{% block content %}
+                <div class="image_wrapper"><img src="/images/404.png?v={{ app_version }}" alt="An image of the Sad Mac."></div>
+                <div itemprop="text">
+                    <div class="text_block">Sorry this page doesn't seem to exist. Return <a href="/">home</a>?</div>
+                </div>
+{% endblock %}
+{% block footer %}{% endblock %}

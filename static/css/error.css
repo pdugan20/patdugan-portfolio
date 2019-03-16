@@ -1,0 +1,18 @@
+.body_outer_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0 auto;
+}
+.image_wrapper img {
+  opacity: 0.7;
+  max-width: 100px;
+}
+.footer {
+  display: none;
+}
+.text_block {
+  margin-bottom: 0;
+}
