@@ -20,7 +20,7 @@ handlers:
   static_dir: static/css
   http_headers:
     Access-Control-Allow-Origin: "*"
-    
+
 - url: /robots.txt
   static_files: static/crawler/robots.txt
   upload: static/crawler/robots.txt
@@ -33,6 +33,9 @@ handlers:
   script: main.py
   secure: always
   redirect_http_response_code: 301
+
+skip_files:
+- static/css/variables.css
 
 libraries:
 - name: jinja2
