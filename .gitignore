@@ -1,4 +1,5 @@
 
 *.pyc
 static/css/.DS_Store
+static/css/variables.css
 .DS_Store
