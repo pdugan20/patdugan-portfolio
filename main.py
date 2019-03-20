@@ -52,9 +52,9 @@ class ErrorPage(webapp2.RequestHandler):
 
 
 application = webapp2.WSGIApplication([
+    ('/', HomePage),
+    ('/.*', ErrorPage),
     ('/vinyl', VinylPage),
     ('/project/quora-messages', QuoraMessagesPage),
     ('/project/quora-ads-manager', QuoraAdsManagerPage),
-    ('/', HomePage),
-    ('/.*', ErrorPage),
 ])
