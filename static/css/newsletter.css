@@ -35,6 +35,10 @@
   form {
     padding: 0 30px;
   }
+  form input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
   .input_button_group {
     margin-top: 5px;
   }
