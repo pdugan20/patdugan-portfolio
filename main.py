@@ -51,10 +51,17 @@ class ErrorPage(webapp2.RequestHandler):
         self.response.out.write(path.render(template_values))
 
 
+class NewsletterPage(webapp2.RequestHandler):
+    def get(self):
+        path = jinja_environment.get_template('newsletter.html')
+        self.response.out.write(path.render(template_values))
+
+
 application = webapp2.WSGIApplication([
     ('/', HomePage),
-    ('/.*', ErrorPage),
     ('/vinyl', VinylPage),
+    ('/newsletter', NewsletterPage),
     ('/project/quora-messages', QuoraMessagesPage),
     ('/project/quora-ads-manager', QuoraAdsManagerPage),
+    ('/.*', ErrorPage),
 ])
