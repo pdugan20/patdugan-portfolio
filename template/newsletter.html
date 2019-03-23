@@ -13,8 +13,11 @@
                     <div class="text_block">I'll share updates on things like projects I've been working on, reviews of books, podcasts, or films, and generally what's on my mind.</div>
                 </div>
                 <form action="https://tinyletter.com/patdugan" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/patdugan', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-                    <label for="tlemail">Enter your email address</label>
-                    <input type="text" style="width:140px" name="email" id="tlemail" />
-                    <input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" />
+                    <label for="tlemail">Enter your email address:</label>
+                    <div class="input_button_group">
+                        <input type="text" class="email_input" name="email" id="tlemail"/>
+                        <input type="hidden" value="1" name="embed"/>
+                        <input type="submit" class="submit_button" value="Subscribe"/>
+                    </div>
                 </form>
 {% endblock %}

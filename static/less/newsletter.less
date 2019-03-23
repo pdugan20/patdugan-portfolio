@@ -1,9 +1,67 @@
 @import "less/variables";
 
+@email_input_width: 250px;
+
 .footer {
     margin-top: @space_medium;
 }
 
-@media only screen and (max-width: @iphone_width) {
+.input_button_group {
+    margin-top: @space_tiny;
 
+    input {
+        outline: none;
+    }
+
+    .email_input {
+        width: @email_input_width;
+        box-sizing: border-box;
+        border-radius: @border_radius;
+        border: @border;
+        font-size: @font_size_regular;
+        padding: @space_micro;
+    }
+
+    .submit_button {
+        font-size: @font_size_regular;
+        border-radius: @border_radius;
+        border: @border;
+        height: (@space_huge - 2px);
+        box-sizing: border-box;
+        margin-left: @space_micro;
+        background-color: @color_light_purple;
+        border-color: @color_purple;
+        color: @color_white;
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken(@color_light_purple, 10%);
+            border-color: darken(@color_purple, 10%);
+        }
+    }
+}
+
+@media only screen and (max-width: @iphone_width) {
+    form {
+        padding: 0 @space_huge;
+    }
+
+    .input_button_group {
+        margin-top: @space_micro;
+
+        .email_input,
+        .submit_button {
+            width: 100%;
+            height: (@space_huge + @space_micro);
+            font-size: @font_size_default;
+        }
+
+        .email_input {
+            margin: @space_micro 0 @space_small 0;
+        }
+
+        .submit_button {
+            margin: 0;
+        }
+    }
 }
