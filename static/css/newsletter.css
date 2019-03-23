@@ -7,6 +7,12 @@
 .input_button_group input {
   outline: none;
 }
+.input_button_group input::-webkit-input-placeholder {
+  color: #9E9E9E;
+}
+.input_button_group input::-moz-placeholder {
+  color: #9E9E9E;
+}
 .input_button_group .email_input {
   width: 250px;
   box-sizing: border-box;
