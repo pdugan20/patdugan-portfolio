@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ super() }}'s Newsletter{% endblock %}
 {% block page_url %}{{ super() }}/newsletter{% endblock %}
-{% block page_description %}Sign up for my newsletter to get occasional updates from me about what I've been up to personally and professionally.{% endblock %}
+{% block page_description %}Sign up for my newsletter to get occasional updates about what I've been up to personally and professionally.{% endblock %}
 {% block page_css %}
         <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?v={{ app_version }}"/>
         <link rel="stylesheet" type="text/css" media="screen" href="/css/newsletter.css?v={{ app_version }}"/>
@@ -9,7 +9,7 @@
 {% block content %}
                 <div class="section_header top_header" itemprop="headline"><a href="/" class="back_arrow"></a>My Newsletter</div>
                 <div itemprop="text">
-                    <div class="text_block">Sign up for my newsletter to get occasional updates from me about what I've been up to personally and professionally.</div>
+                    <div class="text_block">Sign up for my newsletter to get occasional updates about what I've been up to personally and professionally.</div>
                     <div class="text_block">I'll share updates on things like projects I've been working on, reviews of books, podcasts, or films, and generally what's on my mind.</div>
                 </div>
                 <form action="https://tinyletter.com/patdugan" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/patdugan', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
@@ -20,4 +20,7 @@
                         <input type="submit" class="submit_button" value="Subscribe"/>
                     </div>
                 </form>
+{% endblock %}
+{% block footer %}
+                    <li><a class="back_link" href="/">Back Home</a></li>
 {% endblock %}
