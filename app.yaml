@@ -27,6 +27,6 @@ handlers:
   upload: static/crawler/sitemap.xml
 
 - url: .*
-  script: main.app
+  script: auto
   secure: always
   redirect_http_response_code: 301
