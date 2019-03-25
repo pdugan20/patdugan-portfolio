@@ -1,7 +1,4 @@
-runtime: python27
-api_version: 1
-threadsafe: true
-
+runtime: python37
 default_expiration: "7d"
 
 handlers:
@@ -30,7 +27,7 @@ handlers:
   upload: static/crawler/sitemap.xml
 
 - url: .*
-  script: main.application
+  script: main.app
   secure: always
   redirect_http_response_code: 301
 
@@ -39,7 +36,3 @@ skip_files:
 - static/css/variables.css
 - static/less-watch-compiler.config.json
 - template/blog.html
-
-libraries:
-- name: jinja2
-  version: latest

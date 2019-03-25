@@ -1,5 +1,4 @@
-import json
-from google.appengine.api import urlfetch
+import requests
 
 DISCOGS_API = (
     'https://api.discogs.com/users/patdugan/collection/folders/0/releases'
@@ -15,8 +14,8 @@ def record_collection():
     discogsUrl += '&key=' + API_KEY
     discogsUrl += '&secret=' + API_SECRET
 
-    jsonRaw = urlfetch.fetch(discogsUrl)
-    jsonObject = json.loads(jsonRaw.content)
+    jsonRaw = requests.get(discogsUrl)
+    jsonObject = jsonRaw.json()
     recordCollection = jsonObject['releases']
 
     recordList = []

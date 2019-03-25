@@ -1,6 +1,5 @@
-import json
 import time
-from google.appengine.api import urlfetch
+import requests
 
 LASTFM_API = 'http://ws.audioscrobbler.com/2.0/'
 API_KEY = '83353938021dbe423e97d17e863ef498'
@@ -17,8 +16,8 @@ def weekly_artists():
     lastFmUrl += '&api_key=' + API_KEY
     lastFmUrl += '&format=' + 'json'
 
-    jsonRaw = urlfetch.fetch(lastFmUrl)
-    jsonObject = json.loads(jsonRaw.content)
+    jsonRaw = requests.get(lastFmUrl)
+    jsonObject = jsonRaw.json()
     weeklyArtistChart = jsonObject['weeklyartistchart']['artist']
 
     artistList = []
