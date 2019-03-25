@@ -1,0 +1,4 @@
+static/less/
+static/css/variables.css
+static/less-watch-compiler.config.json
+template/blog.html

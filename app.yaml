@@ -30,9 +30,3 @@ handlers:
   script: main.app
   secure: always
   redirect_http_response_code: 301
-
-skip_files:
-- static/less/
-- static/css/variables.css
-- static/less-watch-compiler.config.json
-- template/blog.html
