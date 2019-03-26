@@ -1,3 +1,6 @@
+.git
+.gitignore
+__pycache__/
 *.pyc
 .DS_Store
 static/less/
