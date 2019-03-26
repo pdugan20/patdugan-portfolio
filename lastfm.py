@@ -8,26 +8,27 @@ API_METHOD = 'user.getweeklyartistchart'
 
 
 def weekly_artists():
-    lastFmUrl = LASTFM_API
-    lastFmUrl += '?method=' + API_METHOD
-    lastFmUrl += '&user=' + 'pdugan20'
-    lastFmUrl += '&from=' + str(time.time() - 1209600)  # 2 weeks
-    lastFmUrl += '&to=' + str(time.time())
-    lastFmUrl += '&api_key=' + API_KEY
-    lastFmUrl += '&format=' + 'json'
+    urlParameters = {
+        'method': API_METHOD,
+        'user': 'pdugan20',
+        'from': str(time.time() - 1209600),  # 2 weeks
+        'to': str(time.time()),
+        'api_key': API_KEY,
+        'format': 'json',
+    }
 
-    jsonRaw = requests.get(lastFmUrl)
-    jsonObject = jsonRaw.json()
-    weeklyArtistChart = jsonObject['weeklyartistchart']['artist']
+    weeklyArtistChart = requests.get(
+        LASTFM_API, params=urlParameters
+    ).json()['weeklyartistchart']['artist']
 
     artistList = []
 
     for artist in weeklyArtistChart:
-        current_artist_info = {
+        currentArtistInfo = {
             'name': artist['name'],
             'playcount': artist['playcount'],
             'url': artist['url'],
         }
-        artistList.append(current_artist_info)
+        artistList.append(currentArtistInfo)
 
     return artistList[:5]

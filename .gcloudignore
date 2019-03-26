@@ -1,8 +1,16 @@
+# git files
+.gcloudignore
 .git
 .gitignore
+
+# python pycache
 __pycache__/
-*.pyc
+
+# misc files
 .DS_Store
+*.pyc
+
+# unneeded template files
 static/less/
 static/css/variables.css
 static/less-watch-compiler.config.json

@@ -6,22 +6,24 @@ DISCOGS_API = (
 DISCOGS_ALBUM_URL = 'http://www.discogs.com/release/'
 API_KEY = 'qzhFhUTUMydigBFJCdGU'
 API_SECRET = 'jVlHbmkHintWgTXXEIuENaNLwzoYoJwE'
+ALBUMS_PER_PAGE = '150'
 
 
 def record_collection():
-    discogsUrl = DISCOGS_API
-    discogsUrl += '?per_page=' + '150'
-    discogsUrl += '&key=' + API_KEY
-    discogsUrl += '&secret=' + API_SECRET
+    urlParameters = {
+        'per_page': ALBUMS_PER_PAGE,
+        'key': API_KEY,
+        'secret': API_SECRET,
+    }
 
-    jsonRaw = requests.get(discogsUrl)
-    jsonObject = jsonRaw.json()
-    recordCollection = jsonObject['releases']
+    recordCollection = requests.get(
+        DISCOGS_API, params=urlParameters
+    ).json()['releases']
 
     recordList = []
 
     for lp in recordCollection:
-        current_record_info = {
+        currentRecordInfo = {
             'id': lp['id'],
             'title': lp['basic_information']['title'],
             'artist': (
@@ -30,6 +32,6 @@ def record_collection():
             'year': lp['basic_information']['year'],
             'url': DISCOGS_ALBUM_URL + str(lp['id']),
         }
-        recordList.append(current_record_info)
+        recordList.append(currentRecordInfo)
 
     return recordList
