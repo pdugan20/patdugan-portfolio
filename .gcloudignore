@@ -1,6 +1,7 @@
 # git files
 .gcloudignore
 .git
+.gitattrubites
 .gitignore
 
 # python pycache
