@@ -26,6 +26,9 @@ ol li:last-child {
 .image_group .image_wrapper {
   display: block;
 }
+.image_group .photo_description {
+  margin-top: 5px;
+}
 .map {
   width: 100%;
   height: 300px;
