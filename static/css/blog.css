@@ -29,6 +29,10 @@ ol li:last-child {
 .image_group .photo_description {
   margin-top: 5px;
 }
+.image_group.half_width .photo_description {
+  margin: 5px auto;
+  width: 40%;
+}
 .map {
   width: 100%;
   height: 300px;
