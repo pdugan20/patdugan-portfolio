@@ -94,6 +94,9 @@ img {
   .image_group.map_group {
     padding: 0;
   }
+  .image_group.half_width .photo_description {
+    width: 100%;
+  }
   .image_group.full_width_image {
     padding: 0;
   }
