@@ -34,6 +34,12 @@ class QuoraAdsManagerPage(webapp2.RequestHandler):
         self.response.out.write(path.render(template_values))
 
 
+class QuoraEmailsPage(webapp2.RequestHandler):
+    def get(self):
+        path = jinja_environment.get_template('quora_emails.html')
+        self.response.out.write(path.render(template_values))
+
+
 class VinylPage(webapp2.RequestHandler):
     def get(self):
         template_values['record_collection'] = discogs.record_collection()
@@ -61,5 +67,6 @@ app = webapp2.WSGIApplication([
     ('/newsletter', NewsletterPage),
     ('/project/quora-messages', QuoraMessagesPage),
     ('/project/quora-ads-manager', QuoraAdsManagerPage),
+    ('/project/quora-emails', QuoraEmailsPage),
     ('/.*', ErrorPage),
 ])
