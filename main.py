@@ -22,9 +22,9 @@ class HomePage(webapp2.RequestHandler):
         self.response.out.write(path.render(template_values))
 
 
-class QuoraMessagesPage(webapp2.RequestHandler):
+class NewsletterPage(webapp2.RequestHandler):
     def get(self):
-        path = jinja_environment.get_template('quora_messages.html')
+        path = jinja_environment.get_template('newsletter.html')
         self.response.out.write(path.render(template_values))
 
 
@@ -37,6 +37,12 @@ class QuoraAdsManagerPage(webapp2.RequestHandler):
 class QuoraEmailsPage(webapp2.RequestHandler):
     def get(self):
         path = jinja_environment.get_template('quora_emails.html')
+        self.response.out.write(path.render(template_values))
+
+
+class QuoraMessagesPage(webapp2.RequestHandler):
+    def get(self):
+        path = jinja_environment.get_template('quora_messages.html')
         self.response.out.write(path.render(template_values))
 
 
@@ -55,18 +61,12 @@ class ErrorPage(webapp2.RequestHandler):
         self.response.out.write(path.render(template_values))
 
 
-class NewsletterPage(webapp2.RequestHandler):
-    def get(self):
-        path = jinja_environment.get_template('newsletter.html')
-        self.response.out.write(path.render(template_values))
-
-
 app = webapp2.WSGIApplication([
     ('/', HomePage),
-    ('/vinyl', VinylPage),
     ('/newsletter', NewsletterPage),
-    ('/project/quora-messages', QuoraMessagesPage),
     ('/project/quora-ads-manager', QuoraAdsManagerPage),
     ('/project/quora-emails', QuoraEmailsPage),
+    ('/project/quora-messages', QuoraMessagesPage),
+    ('/vinyl', VinylPage),
     ('/.*', ErrorPage),
 ])
