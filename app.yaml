@@ -18,6 +18,10 @@ handlers:
   http_headers:
     Access-Control-Allow-Origin: "*"
 
+- url: /resume.pdf
+  static_files: static/resume/resume.pdf
+  upload: static/resume/resume.pdf
+
 - url: /robots.txt
   static_files: static/crawler/robots.txt
   upload: static/crawler/robots.txt
