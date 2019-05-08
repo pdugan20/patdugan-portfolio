@@ -5,8 +5,10 @@ import lastfm
 import discogs
 
 jinja_environment = jinja2.Environment(
-    loader=jinja2.FileSystemLoader(os.path.join(
-        os.path.dirname(__file__), 'template')))
+    loader=jinja2.FileSystemLoader(
+        os.path.join(os.path.dirname(__file__), 'template')
+    )
+)
 
 jinja_environment.trim_blocks = True
 jinja_environment.lstrip_blocks = True
