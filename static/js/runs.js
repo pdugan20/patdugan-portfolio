@@ -60,4 +60,15 @@ function initMap() {
         });
         loadGPXFileIntoGoogleMap(map4, "https://www.patdugan.me/runs/oakland_marathon_01.gpx", "Oakland Marathon - 26.22 miles through Oakland, CA");
     }
+
+    if($("#map5").length != 0) {
+        map5 = new google.maps.Map(document.getElementById('map5'), {
+            center: new google.maps.LatLng(37.837112, -122.506691),
+            zoom: 12,
+            mapTypeId: google.maps.MapTypeId.TERRAIN,
+            disableDefaultUI: true,
+            zoomControl: true,
+        });
+        loadGPXFileIntoGoogleMap(map5, "https://www.patdugan.me/runs/north_face_endurance_01.gpx", "North Face Endurance Marathon - 26.29 miles through the Marin Headlands");
+    }
 }
