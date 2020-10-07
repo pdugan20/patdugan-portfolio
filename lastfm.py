@@ -16,10 +16,12 @@ def weekly_artists():
         'api_key': API_KEY,
         'format': 'json',
     }
-
-    weeklyArtistChart = requests.get(
-        LASTFM_API, params=urlParameters
-    ).json()['weeklyartistchart']['artist']
+    try:
+        weeklyArtistChart = requests.get(
+            LASTFM_API, params=urlParameters
+        ).json()['weeklyartistchart']['artist']
+    except:  # noqa
+        return []
 
     artistList = []
 
