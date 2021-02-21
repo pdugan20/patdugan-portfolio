@@ -52,6 +52,9 @@
 .text_block.list_intro {
   margin-bottom: 10px;
 }
+.text_block.bottom_block {
+  margin-bottom: 35px;
+}
 .naked_link {
   font-weight: 400;
   text-decoration: underline;
@@ -65,5 +68,8 @@
   }
   .photo_description.video {
     width: 80%;
+  }
+  .text_block.bottom_block {
+    margin-bottom: 0;
   }
 }

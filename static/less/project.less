@@ -11,7 +11,7 @@
     width: @phone_wrapper_width;
     min-height: @phone_wrapper_height;
     margin: 0 auto;
-    margin-top: @space_hugex;
+    margin-top: @space_huge;
 }
 
 .video_phone_cover {
@@ -80,6 +80,10 @@
     &.list_intro {
         margin-bottom: @space_tiny;
     }
+
+    &.bottom_block {
+        margin-bottom: @space_huge + @space_micro;
+    }
 }
 
 .naked_link {
@@ -101,6 +105,12 @@
     .photo_description {
         &.video {
             width: 80%;
+        }
+    }
+
+    .text_block {
+        &.bottom_block {
+            margin-bottom: 0;
         }
     }
 }
