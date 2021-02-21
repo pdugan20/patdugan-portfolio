@@ -36,7 +36,7 @@
         <!-- opengraph metadata -->
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{% block page_url %}https://www.patdugan.me{% endblock %}"/>
-        <meta property="og:title" content="{{ self.title() }}"/>
+        <meta property="og:title" content="{% block page_title %}{{ self.title() }}{% endblock %}"/>
         <meta property="og:description" content="{% block page_description %}Patrick Dugan is a designer at the Chan Zuckerberg Initiative who previously worked at Quora, Google, and Nextdoor. He was also a member of the Designer Fund's professional development program, Bridge.{% endblock %}"/>
         <meta property="og:image" content="{% block card_image %}https://www.patdugan.me/images/me.jpg{% endblock %}"/>
         <!-- stylesheets -->
