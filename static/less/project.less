@@ -1,8 +1,28 @@
 @import "less/variables";
 
+@phone_wrapper_width:             275px;
+@phone_wrapper_height:            540px;
+
 @desktop_photo_width:             48.9%;
 @mobile_photo_width:              47.9%;
 @mobile_responsive_photo_width:     46%;
+
+.phone_wrapper {
+    width: @phone_wrapper_width;
+    min-height: @phone_wrapper_height;
+    margin: 0 auto;
+    margin-top: @space_hugex;
+}
+
+.video_phone_cover {
+    position: absolute;
+    width: @phone_wrapper_width;
+}
+
+.phone_video {
+    margin-left: 18px;
+    margin-top: 16px;
+}
 
 .image_wrapper {
     display: inline-block;
@@ -23,6 +43,12 @@
 
     &.center {
         text-align: center;
+    }
+
+    &.video {
+        text-align: center;
+        margin: @space_large auto @space_huge auto;
+        width: 70%;
     }
 }
 
@@ -69,6 +95,12 @@
     .image_wrapper {
         &.mobile_inline {
             width: @mobile_responsive_photo_width;
+        }
+    }
+
+    .photo_description {
+        &.video {
+            width: 80%;
         }
     }
 }

@@ -1,3 +1,17 @@
+.phone_wrapper {
+  width: 275px;
+  min-height: 540px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.video_phone_cover {
+  position: absolute;
+  width: 275px;
+}
+.phone_video {
+  margin-left: 18px;
+  margin-top: 16px;
+}
 .image_wrapper {
   display: inline-block;
 }
@@ -14,6 +28,11 @@
 }
 .photo_description.center {
   text-align: center;
+}
+.photo_description.video {
+  text-align: center;
+  margin: 25px auto 30px auto;
+  width: 70%;
 }
 .image_group {
   margin: 30px 0 25px 0;
@@ -43,5 +62,8 @@
   }
   .image_wrapper.mobile_inline {
     width: 46%;
+  }
+  .photo_description.video {
+    width: 80%;
   }
 }

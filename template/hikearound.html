@@ -1,0 +1,82 @@
+{% extends "project_base.html" %}
+{% block title %}Hikearound{% endblock %}
+{% block page_url %}{{ super() }}/project/hikearound{% endblock %}
+{% block page_description %}Patrick Dugan is the founder of Hikearound, the easiest way to discover, save, and share great local hikes.{% endblock %}
+{% block page_css %}
+        {{ super() }}
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css?v={{ app_version }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/project.css?v={{ app_version }}"/>
+{% endblock %}
+{% block content %}{{ super() }}
+                <div itemprop="text">
+                    <div class="text_block">Beginning in earnest during the first COVID-19 lockdown in March of 2020, I began designing and building a multi-platform hiking application, the aim of which was to provide a best in class experience for discovering, saving, and sharing great local hikes.</div>
+                    <div class="text_block">Beyond looking for a way to keep myself occupied while sheltering in place, I greatly enjoy hiking and camping and felt that there was substantial room for improvement and innovation in the space having done a competitive analysis of the related application offerings at the time.</div>
+                    <div class="video phone_wrapper">
+                        <img class="video_phone_cover" src="/images/phones/iphone-x-cover.png">
+                        <video class="phone_video" width="240" autoplay loop muted playsinline>
+                            <source src="/videos/hike.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="photo_description video">The hike screen for Hikearound on iOS as seen interacting with reviews and the hike's map.</div>
+                    <div class="text_block list_intro">The goals I set for this project were to:</div>
+                    <ul class="section_list project_list">
+                        <li>Design and build an application that would afford recreational and seasoned hikers a best in class experience for discovering, saving, and sharing great hikes</li>
+                        <li>Offer a feature-rich iOS version of the application and pair it with a streamlined desktop experience, the purpose of which would be to funnel new users into the native application</li>
+                        <li>Create a continuous reengagement channel through which existing users would be nudged back into the application when new hikes or content became available</li>
+                        <li>Create a robust feature-set for the applications minimum viable product while also cataloging fast-follow features to be tackled post-launch</li>
+                    </ul>
+                    <div class="video phone_wrapper">
+                        <img class="video_phone_cover" src="/images/phones/iphone-x-cover.png">
+                        <video class="phone_video" width="240" autoplay loop muted playsinline>
+                            <source src="/videos/map.mp4?v={{ app_version }}" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="photo_description video">The map screen for Hikearound on iOS as seen exploring hikes across geographic regions.</div>
+                    <div class="text_block list_intro">Over the course of 2020, I eventually went on to build:</div>
+                    <ul class="section_list project_list">
+                        <li>A native iOS application that allowed logged-in users to browse, save, review, and share hikes</li>
+                        <li>A web application which mirrored some of the core functionality of the iOS app, and which was deep-linked with individual hike screens on the native client</li>
+                        <li>A notification platform which sent either emails, push notifications, or both to users on a scheduled or asynchronous basis</li>
+                    </ul>
+                    <div class="video phone_wrapper">
+                        <img class="video_phone_cover" src="/images/phones/iphone-x-cover.png">
+                        <video class="phone_video" width="240" autoplay loop muted playsinline>
+                            <source src="/videos/feed.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="photo_description video">The home screen for Hikearound on iOS as seen filtering, viewing, and favoriting hikes.</div>
+                    <div class="text_block list_intro">Some of the core functionality I focused on building as a part of an MVP included:</div>
+                    <ul class="section_list project_list">
+                        <li>The ability to search for hikes by name, description, or location</li>
+                        <li>The ability for users to use the iOS application even when they declined to share their location</li>
+                        <li>The ability to filter through nearby hikes using a variety of criteria like distance and difficulty</li>
+                        <li>The ability to save hikes for later recall, and to share those hikes either inside or outside of the application</li>
+                        <li>The means by which to allow access to more detailed information about a hike like elevation data without making the experience feel overburdening</li>
+                        <li>The ability to create and interact with user generated content like reviews</li>
+                    </ul>
+                    <div class="video phone_wrapper">
+                        <img class="video_phone_cover" src="/images/phones/iphone-x-cover.png">
+                        <video class="phone_video" width="240" autoplay loop muted playsinline>
+                            <source src="/videos/search.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="photo_description video">The search screen for Hikearound on iOS as viewed searching for hikes by name.</div>
+                    <div class="text_block">In addition to what I considered to be critical MVP features the application needed at launch, I also spent some time implementing features I believed would help me create a more robust and extensible design system. Specifically, I internationalized the iOS and web clients, as well as all of the strings passed through the notification system for both English and Spanish, in order to ensure the design system as implemented could accommodate variable string lengths.</div>
+                    <div class="text_block">I additionally added dark mode theme support for the iOS client, as well as for the email templating system, in order to ensure that even with a reduced color palette, that the text hierarchy remained clear for users.</div>
+                    <div class="image_group inline_group">
+                        <a class="image_wrapper mobile_inline" href="/images/projects/hikearound/02.png?v={{ app_version }}">
+                            <img src="/images/projects/hikearound/02.png?v={{ app_version }}" alt="An image of the Hikearound hike screen for iOS as view in dark mode.">
+                        </a>
+                        <a class="image_wrapper mobile_inline" href="/images/projects/hikearound/01.png?v={{ app_version }}">
+                            <img src="/images/projects/hikearound/01.png?v={{ app_version }}" alt="An image of the Hikearound profile screen for iOS as view in dark mode">
+                        </a>
+                        <div class="photo_description">The hike and profile screens for Hikearound on iOS as viewed in dark mode.</div>
+                    </div>
+                    <div class="text_block">Overall, I had a ton of fun building Hikearound, and theres still a lot of work on my project roadmap that I plan on tackling in the months to come. When looking at what I was able to launch as an MVP, I’m quite happy with where the product is today and I’m excited about where it can go as it continues to grow and scale.</div>
+                    <div class="text_block">Sign-up for Hikearound today and give it a try by visiting <a href="https://www.tryhikearound.com" class="naked_link" target="_blank" itemprop="relatedLink">tryhikearound.com</a>.</div>
+                </div>
+{% endblock %}
+{% block footer %}
+                    <li class="back_li"><a class="back_link" href="/" itemprop="relatedLink">Back Home</a></li>
+                    <li class="forward_li"><a class="forward_link" href="/project/quora-messages" itemprop="relatedLink">Next Project</a></li>
+{% endblock %}

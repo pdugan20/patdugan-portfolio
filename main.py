@@ -30,6 +30,12 @@ class NewsletterPage(webapp2.RequestHandler):
         self.response.out.write(path.render(template_values))
 
 
+class HikearoundPage(webapp2.RequestHandler):
+    def get(self):
+        path = jinja_environment.get_template('hikearound.html')
+        self.response.out.write(path.render(template_values))
+
+
 class QuoraAdsManagerPage(webapp2.RequestHandler):
     def get(self):
         path = jinja_environment.get_template('quora_ads_manager.html')
@@ -66,6 +72,7 @@ class ErrorPage(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', HomePage),
     ('/newsletter', NewsletterPage),
+    ('/project/hikearound', HikearoundPage),
     ('/project/quora-ads-manager', QuoraAdsManagerPage),
     ('/project/quora-emails', QuoraEmailsPage),
     ('/project/quora-messages', QuoraMessagesPage),

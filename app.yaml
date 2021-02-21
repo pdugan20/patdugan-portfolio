@@ -5,6 +5,9 @@ handlers:
 - url: /images
   static_dir: static/images
 
+- url: /videos
+  static_dir: static/videos
+
 - url: /js
   static_dir: static/js
 
