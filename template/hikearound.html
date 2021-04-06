@@ -14,11 +14,11 @@
                     <div class="text_block bottom_block">Beyond looking for a way to keep myself occupied while sheltering in place, I've always really enjoyed hiking and camping and felt that there was substantial room for improvement and innovation amongst existing applications targeting hikers.</div>
                     <div class="video phone_wrapper">
                         <img class="video_phone_cover" src="/images/phones/iphone-x-cover.png?v={{ app_version }}" alt="An image of the iPhone X in Space Gray">
-                        <video class="phone_video" width="240" autoplay loop muted playsinline>
+                        <video id="hikeVideo" class="phone_video" width="240" loop muted playsinline>
                             <source src="/videos/hike.mp4?v={{ app_version }}" type="video/mp4" />
                         </video>
                     </div>
-                    <div class="photo_description video">The Hike screen for Hikearound on iOS as seen interacting with reviews and a detailed hike map.</div>
+                    <div class="photo_description video">The Hike screen for Hikearound on iOS as seen interacting with reviews and a detailed hike map. <a class="play_link" onclick="playVideo(document.getElementById('hikeVideo'))">Play video</a></div>
                     <div class="text_block list_intro">The goals I set for this project were to:</div>
                     <ul class="section_list project_list">
                         <li>Design and build an application that would afford recreational and seasoned hikers a best in class experience for discovering, saving, and sharing great hikes</li>
@@ -28,11 +28,11 @@
                     </ul>
                     <div class="video phone_wrapper">
                         <img class="video_phone_cover" src="/images/phones/iphone-x-cover.png?v={{ app_version }}" alt="An image of the iPhone X in Space Gray">
-                        <video class="phone_video" width="240" autoplay loop muted playsinline>
+                        <video id="mapVideo" class="phone_video" width="240" loop muted playsinline>
                             <source src="/videos/map.mp4?v={{ app_version }}" type="video/mp4" />
                         </video>
                     </div>
-                    <div class="photo_description video">The Map screen for Hikearound on iOS as seen exploring hikes across geographic regions.</div>
+                    <div class="photo_description video">The Map screen for Hikearound on iOS as seen exploring hikes across geographic regions. <a class="play_link" onclick="playVideo(document.getElementById('mapVideo'))">Play video</a></div>
                     <div class="text_block list_intro">Over the course of 2020, at a platform level I went on to build:</div>
                     <ul class="section_list project_list">
                         <li>A native iOS application that allowed logged-in users to browse, save, review, and share hikes</li>
@@ -41,11 +41,11 @@
                     </ul>
                     <div class="video phone_wrapper">
                         <img class="video_phone_cover" src="/images/phones/iphone-x-cover.png?v={{ app_version }}" alt="An image of the iPhone X in Space Gray">
-                        <video class="phone_video" width="240" autoplay loop muted playsinline>
+                        <video id="feedVideo" class="phone_video" width="240" loop muted playsinline>
                             <source src="/videos/feed.mp4?v={{ app_version }}" type="video/mp4" />
                         </video>
                     </div>
-                    <div class="photo_description video">The Home screen for Hikearound on iOS as seen filtering, viewing, and favoriting hikes.</div>
+                    <div class="photo_description video">The Home screen for Hikearound on iOS as seen filtering, viewing, and favoriting hikes. <a class="play_link" onclick="playVideo(document.getElementById('feedVideo'))">Play video</a></div>
                     <div class="text_block list_intro">Some of the core functionality I focused on building as a part of an MVP for the iOS client included:</div>
                     <ul class="section_list project_list">
                         <li>The ability to search for hikes by name, description, or location</li>
@@ -57,20 +57,20 @@
                     </ul>
                     <div class="video phone_wrapper">
                         <img class="video_phone_cover" src="/images/phones/iphone-x-cover.png?v={{ app_version }}" alt="An image of the iPhone X in Space Gray">
-                        <video class="phone_video" width="240" autoplay loop muted playsinline>
+                        <video id="searchVideo" class="phone_video" width="240" loop muted playsinline>
                             <source src="/videos/search.mp4?v={{ app_version }}" type="video/mp4" />
                         </video>
                     </div>
-                    <div class="photo_description video">The Search screen for Hikearound on iOS as viewed searching for hikes by name.</div>
+                    <div class="photo_description video">The Search screen for Hikearound on iOS as viewed searching for hikes by name. <a class="play_link" onclick="playVideo(document.getElementById('searchVideo'))">Play video</a></div>
                     <div class="text_block">In addition to what I considered to be critical MVP features the application needed at launch, I also spent some time implementing features I believed would help me create a more robust and extensible design system.</div>
                     <div class="text_block">Specifically, I internationalized the iOS and web clients, as well as all of the strings passed through the notification system for both English and Spanish, in order to ensure the design system as implemented could accommodate variable string lengths.</div>
                     <div class="video phone_wrapper">
                         <img class="video_phone_cover" src="/images/phones/iphone-x-cover.png?v={{ app_version }}" alt="An image of the iPhone X in Space Gray">
-                        <video class="phone_video" width="240" autoplay loop muted playsinline>
+                        <video id="notificationVideo" class="phone_video" width="240" loop muted playsinline>
                             <source src="/videos/notifications.mp4?v={{ app_version }}" type="video/mp4" />
                         </video>
                     </div>
-                    <div class="photo_description video">The Notification screen for Hikearound on iOS as viewed receiving a 'Review Like' notification.</div>
+                    <div class="photo_description video">The Notification screen for Hikearound on iOS as viewed receiving a 'Review Like' notification. <a class="play_link" onclick="playVideo(document.getElementById('notificationVideo'))">Play video</a></div>
                     <div class="text_block">I also added dark mode theme support for the iOS client, as well as for the email templating system, in order to ensure that even with a reduced color palette, that the text hierarchy remained clear for users.</div>
                     <div class="text_block bottom_block">Outside of features I built directly in support of the design system itself, I also built a moderation system for user generated content in order to help ensure Hikearound remains a welcoming space for all its users.</div>
                     <div class="image_group inline_group">
