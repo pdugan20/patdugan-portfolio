@@ -10,7 +10,7 @@
 {% endblock %}
 {% block content %}{{ super() }}
                 <div itemprop="text">
-                    <div class="text_block">Beginning in earnest during the first COVID-19 lockdown in March of 2020, I began designing and building a multi-platform hiking application, the aim of which was to provide a best in class experience for discovering, saving, and sharing great local hikes.</div>
+                    <div class="text_block">In March of 2020, I began designing and building a multi-platform hiking application, the aim of which was to provide a best in class experience for discovering, saving, and sharing great local hikes.</div>
                     <div class="text_block bottom_block">Beyond looking for a way to keep myself occupied while sheltering in place, I've always really enjoyed hiking and camping and felt that there was substantial room for improvement and innovation amongst existing applications targeting hikers.</div>
                     <div class="video phone_wrapper">
                         <img class="video_phone_cover" src="/images/phones/iphone-x-cover.png?v={{ app_version }}" alt="An image of the iPhone X in Space Gray">
@@ -42,10 +42,10 @@
                     <div class="video phone_wrapper">
                         <img class="video_phone_cover" src="/images/phones/iphone-x-cover.png?v={{ app_version }}" alt="An image of the iPhone X in Space Gray">
                         <video id="feedVideo" preload="metadata" class="phone_video" width="240" loop muted playsinline>
-                            <source src="/videos/feed.mp4?v={{ app_version }}#t=0.2" type="video/mp4" />
+                            <source src="/videos/filter.mp4?v={{ app_version }}#t=0.2" type="video/mp4" />
                         </video>
                     </div>
-                    <div class="photo_description video">The Home screen for Hikearound on iOS as seen filtering, viewing, and favoriting hikes. <a class="play_link" onclick="playVideo(document.getElementById('feedVideo'))">Play video</a></div>
+                    <div class="photo_description video">The Home screen for Hikearound on iOS as seen filtering hikes by a variety of attributes. <a class="play_link" onclick="playVideo(document.getElementById('feedVideo'))">Play video</a></div>
                     <div class="text_block list_intro">Some of the core functionality I focused on building as a part of an MVP for the iOS client included:</div>
                     <ul class="section_list project_list">
                         <li>The ability to search for hikes by name, description, or location</li>
