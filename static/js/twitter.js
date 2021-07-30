@@ -6,7 +6,6 @@ window.twttr = (function(d, s, id) {
     js.id = id;
     js.src = "https://platform.twitter.com/widgets.js";
     fjs.parentNode.insertBefore(js, fjs);
-
     t._e = [];
     t.ready = function(f) {
         t._e.push(f);

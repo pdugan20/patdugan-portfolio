@@ -56,8 +56,21 @@ class QuoraMessagesPage(webapp2.RequestHandler):
 
 class VinylPage(webapp2.RequestHandler):
     def get(self):
-        template_values['record_collection'] = discogs.record_collection()
-        template_values['artist_list'] = lastfm.weekly_artists()
+        page = self.request.get_all('page')
+
+        if not page:
+            page = 1
+        else:
+            page = page[0]
+
+        discogsData = discogs.record_collection(page)
+        artistData = lastfm.weekly_artists()
+
+        template_values['record_collection'] = discogsData[0]
+        template_values['pagination'] = discogsData[1]
+        template_values['album_count'] = discogsData[1].get('items')
+        template_values['artist_list'] = artistData
+
         path = jinja_environment.get_template('vinyl.html')
         self.response.out.write(path.render(template_values))
 

@@ -10,7 +10,7 @@
 {% block content %}
                 <div class="section_header top_header" itemprop="headline"><a href="/" class="back_arrow"></a>Vinyl Collection</div>
                 <div itemprop="text">
-                    <div class="text_block">I really enjoy listening to records and currently have <a href="https://www.discogs.com/user/patdugan/collection" target="_blank">{{record_collection|length}}</a> in my collection. I listen on a <a href="https://www.radiomuseum.org/r/sony_str_1800str180.html" target="_blank">Sony STR-1800</a> receiver with a <a href="https://www.vinylengine.com/library/sony/ps-3300.shtml" target="_blank">Sony PS-3300</a> turntable.</div>
+                    <div class="text_block">I really enjoy listening to records and currently have <a href="https://www.discogs.com/user/patdugan/collection" target="_blank">{{album_count}}</a> in my collection. I listen on a <a href="https://www.radiomuseum.org/r/sony_str_1800str180.html" target="_blank">Sony STR-1800</a> receiver with a <a href="https://www.vinylengine.com/library/sony/ps-3300.shtml" target="_blank">Sony PS-3300</a> turntable.</div>
                     {% if artist_list is defined and artist_list|length > 0 %}<div class="text_block">This past week I've been listening to{% for artist in artist_list %} <a href="{{ artist.url }}" target="_blank">{{ artist.name }}{% if not loop.last %}</a>,{% endif %}{% if loop.index == 4 %} and{% endif %}{% endfor %}</a>.</div>{% endif %}
                     <div class="text_block">Check out my <a href="https://last.fm/user/pdugan20" target="_blank">last.fm profile</a> to learn more about the types of music I like.</div>
                 </div>
@@ -28,5 +28,6 @@
                 </div>
 {% endblock %}
 {% block footer %}
-                    <li><a class="back_link" href="/">Back Home</a></li>
+                    {% set previousPage = pagination.page - 1 %}{% if pagination.page == 1 %}<li><a class="back_link" href="/">Back Home</a></li>{% else %}<li><a class="back_link" href="/vinyl?page={{previousPage}}">Previous Album Page</a></li>{% endif %}
+                    {% set nextPage = pagination.page + 1 %}{% if pagination.page != pagination.pages %}<li class="forward_li"><a class="forward_link" href="/vinyl?page={{nextPage}}" itemprop="relatedLink">Next Album Page</a></li>{% endif %}
 {% endblock %}
