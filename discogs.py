@@ -6,19 +6,23 @@ DISCOGS_API = (
 DISCOGS_ALBUM_URL = 'http://www.discogs.com/release/'
 API_KEY = 'qzhFhUTUMydigBFJCdGU'
 API_SECRET = 'jVlHbmkHintWgTXXEIuENaNLwzoYoJwE'
-ALBUMS_PER_PAGE = '150'
+ALBUMS_PER_PAGE = '48'
 
 
-def record_collection():
+def record_collection(page):
     urlParameters = {
+        'page': page,
         'per_page': ALBUMS_PER_PAGE,
         'key': API_KEY,
         'secret': API_SECRET,
     }
 
-    recordCollection = requests.get(
+    api = requests.get(
         DISCOGS_API, params=urlParameters
-    ).json()['releases']
+    ).json()
+
+    recordCollection = api['releases']
+    pagination = api['pagination']
 
     recordList = []
 
@@ -34,4 +38,4 @@ def record_collection():
         }
         recordList.append(currentRecordInfo)
 
-    return recordList
+    return [recordList, pagination]
